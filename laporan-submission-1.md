@@ -10,13 +10,13 @@ Dalam menentukan harga mobil dapat dilakukan dengan berbagai cara diantaranya me
 
 ### Problem Statements
 
-- Bagaimana cara menentukan harga mobil?
-- Bagaimana melakukan pendekatan machine learning untuk prediksi harga mobil?
+- Faktor apa yang mempengaruhi harga penjualan mobil?
+- Bagaimana pendekatan machine learning yang digunakan untuk prediksi harga mobil?
 
 ### Goals
 
-- Harga mobil ditentukan berdasarkan merk, model dan tahun.
-- Pendekatan machine learning yang digunakan adalah bentuk model regresi.
+- Mengetahui faktor yang mempengaruhi harga penjualan mobil.
+- Mengetahui pendekatan machine learning yang digunakan untuk prediksi harga mobil.
 
 ## REFERENSI
 
