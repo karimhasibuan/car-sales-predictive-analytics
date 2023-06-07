@@ -6,6 +6,18 @@ Penjualan mobil merupakan salah satu bisnis di dunia industri. Dalam menjalankan
 
 Dalam menentukan harga mobil dapat dilakukan dengan berbagai cara diantaranya melakukan pendekatan machine learning. Machine learning merupakan salah satu teknik yang dapat membantu dalam melakukan prediksi (Daqiqil, 2021).
 
+## Business Understanding
+
+### Problem Statements
+
+- Bagaimana cara menentukan harga mobil?
+- Bagaimana melakukan pendekatan machine learning untuk prediksi harga mobil?
+
+### Goals
+
+- Harga mobil ditentukan berdasarkan merk, model dan tahun.
+- Pendekatan machine learning yang digunakan adalah bentuk model regresi.
+
 ## REFERENSI
 
 Daqiqil, Ibnu. (2021). Machine Learning: Teori, Studi Kasus dan Implementasi Menggunakan Python (Vol. 1). Unri Press.
