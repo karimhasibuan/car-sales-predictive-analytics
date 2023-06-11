@@ -18,7 +18,44 @@ Dalam menentukan harga mobil dapat dilakukan dengan berbagai cara diantaranya me
 - Mengetahui faktor yang mempengaruhi harga penjualan mobil.
 - Mengetahui pendekatan machine learning yang digunakan untuk prediksi harga mobil.
 
+### Solution Approach
+
+Berdasarkan peryantaan masalah dan tujuan yang telah disebutkan, maka terdapat solusi yang diberikan yaitu dengan menggunakan 3 algoritma Machine Learning pada kasus model regresi sebagai berikut:
+
+- Regresi Linear
+
+  Regresi linear adalah salah satu algoritma yang paling sederhana dan paling umum digunakan dalam prediksi variabel kontinu. Keuntungan utama regresi linear adalah interpretabilitas yang tinggi. Model regresi linear memberikan pemahaman yang jelas tentang bagaimana setiap fitur (tipe, model, tahun mobil) berkontribusi terhadap prediksi harga mobil. Selain itu, regresi linear bekerja dengan baik ketika ada hubungan linier yang kuat antara fitur-fitur independen dan variabel dependen (Munawar et al., 2023).
+
+- Decision Tree
+
+  Decision tree adalah algoritma yang dapat memodelkan hubungan yang lebih kompleks antara fitur-fitur dan variabel target. Decision tree membagi dataset berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya, dan ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi linear ( Chris & Susilawati, 2020).
+
+- Random Forest
+
+  Random forest adalah metode ensemble yang memanfaatkan kombinasi decision tree. Dalam random forest, beberapa decision tree dibangun secara independen dan hasil prediksi dikombinasikan. Keuntungan random forest adalah kemampuannya dalam mengatasi overfitting, karena menggabungkan hasil dari beberapa model yang berbeda. Random forest juga efektif dalam menangani dataset yang besar dan kompleks, serta memiliki kinerja yang baik dalam kasus klasifikasi maupun regresi (Ariyoga, 2022).
+
+Berdasarkan algoritma yang digunakan diatas, maka akan dilakukan evaluasi dan pengujian model menggunakan metrik evaluasi yang tepat seperti Mean Squared Error (MSE).
+
+## Data Understanding
+
+Dataset yang digunakan pada proyek machine learning ini adalah [Car Sales Data](https://www.kaggle.com/datasets/suraj520/car-sales-data) yang bersumber dari Kaggle.
+
+Berdasarkan dataset diatas, maka dapat diketahui variabel-variabel pada dataset tersebut yaitu sebagai berikut:
+
+- **Date** merupakan tanggal penjualan mobil.
+- **Salesperson** merupakan nama penjual yang melakukan penjualan.
+- **Customer Name** merupakan nama pelanggan yang membeli mobil.
+- **Car Make** merupakan merk mobil yang dibeli.
+- **Car Model** merupakan model dari merk mobil yang dibeli.
+- **Car Year** merupakan tahun pembuatan mobil yang dibeli.
+- **Sale Pric** merupakan harga mobil yang dijual dalam bentuk USD.
+- **Commision Rate** merupakan Tarif komisi yang dibayarkan kepada tenaga penjual atas penjualan tersebut.
+- **Commision Earned** merupakan Jumlah komisi yang diperoleh penjual atas penjualan tersebut.
+
 ## REFERENSI
 
+ARIYOGA, D. (2022). Perbandingan Metode Seleksi Fitur Filter, Wrapper, Dan Embedded Pada Klasifikasi Data Nirs Mangga Menggunakan Random Forest Dan Support Vector Machine (Svm).
+Chris, S., & Susilawati, D. (2020). Analisis Perancangan Sistem untuk Kepuasan Pelanggan pada UD. Shinta Elektronic dengan Menggunakan Metode Algoritma C4. 5. ALGOR, 1(2), 52-58.
 Daqiqil, Ibnu. (2021). Machine Learning: Teori, Studi Kasus dan Implementasi Menggunakan Python (Vol. 1). Unri Press.
 Lubis, A. N. (2004). Strategi Pemasaran dalam persaingan bisnis.
+Munawar, Z., Muliantara, A., Kmurawak, R. M., Reba, F., Sroyer, A., Sukmawan, D., ... & Beno, I. S. (2023). Big Data Analytics: Konsep, Implementasi, dan Aplikasi Terkini. Kaizen Media Publishing.
