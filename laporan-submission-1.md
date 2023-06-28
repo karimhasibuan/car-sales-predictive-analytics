@@ -52,6 +52,8 @@ Berdasarkan dataset diatas, maka dapat diketahui variabel-variabel pada dataset 
 - **Commision Rate** merupakan Tarif komisi yang dibayarkan kepada tenaga penjual atas penjualan tersebut.
 - **Commision Earned** merupakan Jumlah komisi yang diperoleh penjual atas penjualan tersebut.
 
+Tahapan yang dilakukan dalam visualisasi data adalah melakukan visualisasi pada hasil exploratory data analysis seperti menemukan fitur-fitur yang relevan.
+
 ## REFERENSI
 
 ARIYOGA, D. (2022). Perbandingan Metode Seleksi Fitur Filter, Wrapper, Dan Embedded Pada Klasifikasi Data Nirs Mangga Menggunakan Random Forest Dan Support Vector Machine (Svm).
