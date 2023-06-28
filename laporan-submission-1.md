@@ -38,7 +38,7 @@ Berdasarkan algoritma yang digunakan diatas, maka akan dilakukan evaluasi dan pe
 
 ## Data Understanding
 
-Dataset yang digunakan pada proyek machine learning ini adalah [Car Sales Data](https://www.kaggle.com/datasets/suraj520/car-sales-data) yang bersumber dari Kaggle.
+Dataset yang digunakan pada proyek machine learning ini adalah [Car Sales Data](https://www.kaggle.com/datasets/suraj520/car-sales-data) yang bersumber dari Kaggle. Dataset ini berisi informasi tentang penjualan mobil dari dealer mobil selama setahun.
 
 Berdasarkan dataset diatas, maka dapat diketahui variabel-variabel pada dataset tersebut yaitu sebagai berikut:
 
