@@ -48,7 +48,7 @@ Berdasarkan dataset diatas, maka dapat diketahui variabel-variabel pada dataset 
 - **Car Make** merupakan merk mobil yang dibeli.
 - **Car Model** merupakan model dari merk mobil yang dibeli.
 - **Car Year** merupakan tahun pembuatan mobil yang dibeli.
-- **Sale Pric** merupakan harga mobil yang dijual dalam bentuk USD.
+- **Sale Price** merupakan harga mobil yang dijual dalam bentuk USD.
 - **Commision Rate** merupakan Tarif komisi yang dibayarkan kepada tenaga penjual atas penjualan tersebut.
 - **Commision Earned** merupakan Jumlah komisi yang diperoleh penjual atas penjualan tersebut.
 
