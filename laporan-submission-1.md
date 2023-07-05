@@ -66,6 +66,53 @@ Pada project ini, terdapat beberapa teknik data preparation yang digunakan, yait
 - Memisahkan kolom fitur dan target. Dalam hal ini, kolom fitur yaitu kolom selain Sale Price dan kolom target adalah Sale Price.
 - Membagi dataset yang telah melewati tahap preprocessing menjadi data latih dan data uji. Pembagian dibagi sebesar 80% untuk data latih dan 20% data uji.
 
+## MODELLING
+
+Pada project ini, menggunakan 3 algoritma yaitu Regresi Linear, Decision Tree dan KNN (K-Nearest Neighbors). Kelebihan dan Kekurangan Algoritma tersebut adalah sebagai berikut:
+
+Berikut adalah kelebihan dan kekurangan dari tiga algoritma tersebut:
+
+1. Regresi Linear:
+   Kelebihan:
+
+   - Sederhana dan mudah diinterpretasikan.
+   - Cocok untuk memodelkan hubungan linier antara variabel dependen dan independen.
+   - Cocok untuk memprediksi nilai kontinu.
+
+   Kekurangan:
+
+   - Tidak bisa menangkap hubungan non-linier antara variabel.
+   - Rentan terhadap asumsi yang tidak terpenuhi, seperti asumsi keterikatan linieritas dan independensi error.
+
+2. Decision Tree:
+   Kelebihan:
+
+   - Mudah dipahami dan diinterpretasikan.
+   - Mampu menangani data dengan jenis variabel campuran (numerik dan kategorikal).
+   - Tidak memerlukan preprocessing data yang rumit.
+
+   Kekurangan:
+
+   - Cenderung overfitting terhadap data pelatihan jika tidak diatur dengan baik.
+   - Tidak stabil terhadap perubahan kecil pada data pelatihan.
+
+3. KNN (K-Nearest Neighbors):
+   Kelebihan:
+
+   - Sederhana dan mudah diimplementasikan.
+   - Tidak mengasumsikan distribusi data tertentu.
+   - Mampu menangani data dengan variasi tinggi dan tidak memerlukan asumsi yang kuat tentang data.
+
+   Kekurangan:
+
+   - Memerlukan komputasi yang lebih tinggi karena melibatkan perhitungan jarak antara data.
+   - Sensitif terhadap skala data dan pemilihan parameter K yang tepat.
+   - Tidak memberikan interpretasi yang jelas tentang hubungan antara variabel.
+
+Berdasarkan hasil modelling dari 3 algoritma yang digunakan diatas, algoritma KNN membutuhkan lebih banyak waktu dibandingkan algoritma lainnya.
+
+## EVALUATION
+
 ## REFERENSI
 
 Chris, S., & Susilawati, D. (2020). Analisis Perancangan Sistem untuk Kepuasan Pelanggan pada UD. Shinta Elektronic dengan Menggunakan Metode Algoritma C4. 5. ALGOR, 1(2), 52-58.
