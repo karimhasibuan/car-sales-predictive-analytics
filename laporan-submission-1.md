@@ -18,17 +18,17 @@ Oleh karena itu, penggunaan teknik _machine learning_ dalam menentukan harga mob
 
 ### Problem Statements
 
-- Faktor apa yang mempengaruhi harga penjualan mobil?
-- Bagaimana pendekatan machine learning yang digunakan untuk prediksi harga mobil?
+- Faktor apa yang paling berpengaruh terhadap harga penjualan mobil?
+- Bagaimana pendekatan _machine learning_ dapat digunakan untuk memprediksi harga mobil berdasarkan faktor-faktor yang berpengaruh tersebut?
 
 ### Goals
 
-- Mengetahui faktor yang mempengaruhi harga penjualan mobil.
-- Mengetahui pendekatan machine learning yang digunakan untuk prediksi harga mobil.
+- Memahami faktor-faktor yang mempengaruhi harga penjualan mobil untuk dapat mengidentifikasi variabel yang paling signifikan dalam menentukan harga sehingga memberikan wawasan yang lebih baik dalam strategi penetapan harga, mendukung pengambilan keputusan yang lebih informasional, dan memperkuat strategi pemasaran dalam industri penjualan mobil.
+- Memahami pendekatan _machine learning_ yang digunakan untuk prediksi harga mobil, sehingga melalui penerapan pendekatan _machine learning_ dalam prediksi harga mobil mampu meningkatkan efisiensi dan kecepatan dalam penentuan harga, meminimalkan kesalahan manusia, serta memberikan keunggulan kompetitif dalam bisnis penjualan mobil.
 
 ### Solution Approach
 
-Berdasarkan peryantaan masalah dan tujuan yang telah disebutkan, maka terdapat solusi yang diberikan yaitu dengan menggunakan 3 algoritma Machine Learning pada kasus model regresi sebagai berikut:
+Berdasarkan pernyataan masalah dan tujuan yang telah disebutkan, maka terdapat solusi yang diberikan yaitu dengan menggunakan 3 algoritma Machine Learning pada kasus model regresi sebagai berikut:
 
 - Regresi Linear
 
