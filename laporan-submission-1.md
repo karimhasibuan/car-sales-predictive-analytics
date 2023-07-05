@@ -2,9 +2,17 @@
 
 ## Domain Proyek
 
-Penjualan mobil merupakan salah satu bisnis di dunia industri. Dalam menjalankan bisnis tersebut, diperlukan strategi pemasaran yang tepat dalam menentukan harga produk agar dapat memberikan harga yang ideal bagi konsumen (Lubis, 2004). Konsumen sering kali ingin mengetahui harga yang realistis sebelum membeli mobil, hal ini membantu mereka dalam melakukan perencanaan keuangan dan pengambilan keputusan pembelian yang lebih baik.
+Industri alat angkutan atau otomotif di Indonesia menunjukkan pertumbuhan yang positif berdasarkan data dari Badan Pusat Statistik (BPS). Pada tahun 2022, produk domestik bruto (PDB) industri otomotif atas dasar harga konstan (ADHK) mencapai Rp207,79 triliun, mengalami kenaikan sebesar 10,67% dibandingkan tahun sebelumnya yang sebesar Rp187,75 triliun. Setelah mengalami penurunan akibat pandemi Covid-19 pada tahun 2020, industri otomotif mulai pulih sejak tahun 2021 dan pertumbuhannya terus berlanjut pada tahun lalu. PDB industri otomotif juga menempati posisi ketiga terbesar di antara subsektor industri pengolahan lainnya, di bawah industri logam dasar yang tumbuh 14,8% dan industri mesin yang naik 11,37% [1].
 
-Dalam menentukan harga mobil dapat dilakukan dengan berbagai cara diantaranya melakukan pendekatan machine learning. Machine learning merupakan salah satu teknik yang dapat membantu dalam melakukan prediksi (Daqiqil, 2021).
+Pertumbuhan industri otomotif didukung oleh kebijakan pemerintah dalam bentuk diskon pajak penjualan atas barang mewah (PPnBM) sepanjang tahun 2022. Kebijakan ini berhasil meningkatkan penjualan mobil sebesar 18,1%. Industri alat angkutan, sebagai bagian dari industri pengolahan, berkontribusi sebesar 8,67% terhadap PDB industri pengolahan pada tahun 2022 [2]. Data ini menunjukkan pentingnya industri otomotif dalam ekonomi nasional dan perannya dalam memulihkan pertumbuhan ekonomi setelah masa-masa sulit akibat pandemi[3].
+
+Penjualan mobil adalah salah satu sektor bisnis yang memiliki peran penting dalam industri otomotif. Di tengah persaingan yang semakin ketat dan meningkatnya permintaan konsumen, strategi pemasaran yang tepat menjadi kunci keberhasilan dalam menjalankan bisnis penjualan mobil. Salah satu aspek penting dalam strategi pemasaran adalah menentukan harga yang tepat untuk mobil yang ditawarkan. Menetapkan harga yang ideal adalah suatu tantangan, mengingat perbedaan preferensi konsumen, persaingan pasar, dan faktor-faktor lainnya yang mempengaruhi harga mobil [4].
+
+Dalam upaya menentukan harga mobil yang realistis, diperlukan pendekatan yang dapat memberikan hasil prediksi yang akurat. Salah satu pendekatan yang dapat digunakan adalah penerapan teknik machine learning. Dengan menggunakan teknik machine learning, kita dapat memanfaatkan data historis penjualan mobil, variabel-variabel yang relevan, dan algoritma pembelajaran mesin untuk melakukan prediksi harga mobil yang lebih akurat [5].
+
+Penerapan teknik machine learning dalam menentukan harga mobil memiliki relevansi yang kuat dengan kebutuhan pasar dan preferensi konsumen. Konsumen sering kali ingin memiliki gambaran yang jelas tentang harga yang realistis sebelum mereka memutuskan untuk membeli mobil. Dengan adanya prediksi harga yang lebih akurat melalui teknik machine learning, konsumen dapat melakukan perencanaan keuangan dengan lebih baik, membandingkan harga dari berbagai pilihan mobil, dan membuat keputusan pembelian yang lebih informasional.
+
+Oleh karena itu, penggunaan teknik machine learning dalam menentukan harga mobil memberikan manfaat yang signifikan dalam meningkatkan keputusan bisnis, memberikan keuntungan kompetitif, dan memberikan kepuasan bagi konsumen.
 
 ## Business Understanding
 
@@ -139,11 +147,17 @@ Dalam beberapa kasus, komisi yang diperoleh dan tingkat komisi yang diterapkan d
 
 ## REFERENSI
 
+[1] B. P. Statistik, “Laju Pertumbuhan Produk Domestik Bruto Atas Dasar Harga Konstan 2010 Menurut Lapangan Usaha (persen), 2022,” Badan Pusat Statistik, https://www.bps.go.id/indikator/indikator/view_data_pub/0000/api_pub/aDJqeEc4MTJlOWRaRWFOQ1Q4UE5UQT09/da_15/1 (accessed Jul. 5, 2023).
+
+[2] K. Perindustrian, “Kemenperin: Produksi Mobil Lampaui Target, Penjualan Naik 71 persen,” Kementerian Perindustrian, https://kemenperin.go.id/artikel/22994/Produksi-Mobil-Lampaui-Target,-Penjualan-Naik-71-Persen (accessed Jul. 5, 2023).
+
+[3] S. Sadya, “Kinerja Industri Otomotif melonjak 10,67% PADA 2022,” Dataindonesia.id, https://dataindonesia.id/sektor-riil/detail/kinerja-industri-otomotif-melonjak-1067-pada-2022 (accessed Jul. 5, 2023).
+
+[4] G. A. Taroreh, L. Mananeke, and F. Roring, “ANALISIS STRATEGI PEMASARAN DALAM MENINGKATKAN VOLUME PENJUALAN MOBIL MITSUBISHI XPANDER PADA PT. BOSOWA BERLIANMOTOR KAIRAGI MARKETING STRATEGY ANALYSIS IN INCREASING THE SALES VOLUME OF MITSUBISHI XPANDER CARS AT PT. BOSOWA BERLIAN MOTOR KAIRAGI,” Analisis Strategi…… 3683 Jurnal EMBA, vol. 6, no. 4, pp. 3683–3692, 2018.
+
+[5] I. Daqiqil, MACHINE LEARNING: Teori, Studi Kasus Dan Implementasi Menggunakan Python. Riau, Universitas Riau: UR Press, 2021.
+
 Chris, S., & Susilawati, D. (2020). Analisis Perancangan Sistem untuk Kepuasan Pelanggan pada UD. Shinta Elektronic dengan Menggunakan Metode Algoritma C4. 5. ALGOR, 1(2), 52-58.
-
-Daqiqil, Ibnu. (2021). Machine Learning: Teori, Studi Kasus dan Implementasi Menggunakan Python (Vol. 1). Unri Press.
-
-Lubis, A. N. (2004). Strategi Pemasaran dalam persaingan bisnis.
 
 Munawar, Z., Muliantara, A., Kmurawak, R. M., Reba, F., Sroyer, A., Sukmawan, D., ... & Beno, I. S. (2023). Big Data Analytics: Konsep, Implementasi, dan Aplikasi Terkini. Kaizen Media Publishing.
 
