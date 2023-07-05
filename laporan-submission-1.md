@@ -30,9 +30,9 @@ Berdasarkan peryantaan masalah dan tujuan yang telah disebutkan, maka terdapat s
 
   Decision tree adalah algoritma yang dapat memodelkan hubungan yang lebih kompleks antara fitur-fitur dan variabel target. Decision tree membagi dataset berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya, dan ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi linear ( Chris & Susilawati, 2020).
 
-- Random Forest
+- KNN (K-Nearest Neighbors)
 
-  Random forest adalah metode ensemble yang memanfaatkan kombinasi decision tree. Dalam random forest, beberapa decision tree dibangun secara independen dan hasil prediksi dikombinasikan. Keuntungan random forest adalah kemampuannya dalam mengatasi overfitting, karena menggabungkan hasil dari beberapa model yang berbeda. Random forest juga efektif dalam menangani dataset yang besar dan kompleks, serta memiliki kinerja yang baik dalam kasus klasifikasi maupun regresi (Ariyoga, 2022).
+  KNN (K-Nearest Neighbors) adalah algoritma machine learning yang digunakan untuk klasifikasi dan regresi. Algoritma ini bekerja dengan mencari tetangga terdekat dari suatu data dan memprediksi berdasarkan mayoritas label atau rata-rata nilai tetangga terdekatnya. KNN dipilih karena kemampuannya yang sederhana, intuitif, dan mampu menangani hubungan lokal antara fitur dan target (Nikmatun & Waspada, 2019).
 
 Berdasarkan algoritma yang digunakan diatas, maka akan dilakukan evaluasi dan pengujian model menggunakan metrik evaluasi yang tepat seperti Mean Squared Error (MSE).
 
@@ -56,8 +56,12 @@ Tahapan yang dilakukan dalam visualisasi data adalah melakukan visualisasi pada 
 
 ## REFERENSI
 
-ARIYOGA, D. (2022). Perbandingan Metode Seleksi Fitur Filter, Wrapper, Dan Embedded Pada Klasifikasi Data Nirs Mangga Menggunakan Random Forest Dan Support Vector Machine (Svm).
 Chris, S., & Susilawati, D. (2020). Analisis Perancangan Sistem untuk Kepuasan Pelanggan pada UD. Shinta Elektronic dengan Menggunakan Metode Algoritma C4. 5. ALGOR, 1(2), 52-58.
+
 Daqiqil, Ibnu. (2021). Machine Learning: Teori, Studi Kasus dan Implementasi Menggunakan Python (Vol. 1). Unri Press.
+
 Lubis, A. N. (2004). Strategi Pemasaran dalam persaingan bisnis.
+
 Munawar, Z., Muliantara, A., Kmurawak, R. M., Reba, F., Sroyer, A., Sukmawan, D., ... & Beno, I. S. (2023). Big Data Analytics: Konsep, Implementasi, dan Aplikasi Terkini. Kaizen Media Publishing.
+
+Nikmatun, I. A., & Waspada, I. (2019). Implementasi data mining untuk klasifikasi masa studi mahasiswa menggunakan algoritma K-Nearest Neighbor. Simetris: Jurnal Teknik Mesin, Elektro dan Ilmu Komputer, 10(2), 421-432.
