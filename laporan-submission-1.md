@@ -109,9 +109,33 @@ Berikut adalah kelebihan dan kekurangan dari tiga algoritma tersebut:
    - Sensitif terhadap skala data dan pemilihan parameter K yang tepat.
    - Tidak memberikan interpretasi yang jelas tentang hubungan antara variabel.
 
-Berdasarkan hasil modelling dari 3 algoritma yang digunakan diatas, algoritma KNN membutuhkan lebih banyak waktu dibandingkan algoritma lainnya.
+Berdasarkan hasil modelling dari 3 algoritma yang digunakan diatas, algoritma Decision Tree membutuhkan lebih banyak waktu dibandingkan algoritma lainnya.
 
 ## EVALUATION
+
+Pada project ini, matriks evaluasi yang digunakan dalam proyek ini adalah Mean Squared Error (MSE). MSE digunakan sebagai ukuran kesalahan antara nilai prediksi dan nilai sebenarnya dalam kasus regresi. Semakin kecil nilai MSE, semakin baik model dalam melakukan prediksi yang akurat. Dalam kasus ini, tiga algoritma telah dievaluasi yaitu Regresi Linear, Decision Tree, dan KNN.
+
+[![mse-reports.png](https://i.postimg.cc/5Nw2y7fn/mse-reports.png)](https://postimg.cc/ZC5SDLBd)
+
+Berdasarkan hasil diatas, dapat diketahui bahwa Decision Tree maupun KNN memberikan hasil prediksi yang lebih baik dengan nilai MSE yang lebih rendah dibandingkan Regresi Linear. Oleh karena itu, untuk dataset ini, model Decision Tree dan KNN lebih disarankan untuk digunakan dalam melakukan prediksi Sale Price.
+
+[![sale-predict.png](https://i.postimg.cc/J4TdNm7n/sale-predict.png)](https://postimg.cc/6yv0KkvJ)
+
+Berdasarkan hasil pengujian prediksi diatas, memang hasil pada algoritma Decision Tree yang paling mendekati kemudian disusul oleh KNN dan ada algoritma Regresi Linear. Meski begitu, hasil prediksi masih jauh dari nilai asli.
+
+[![important-feature.png](https://i.postimg.cc/BZPxY0Cb/important-feature.png)](https://postimg.cc/kD96GLzP)
+
+Hasil yang didapatkan menunjukkan skor pentingnya fitur dalam menentukan Sale Price. Setiap fitur memiliki skor penting yang dinyatakan sebagai angka.
+
+Misalnya, "Commission Earned" memiliki skor penting sebesar 0.7083596164141285, yang berarti fitur tersebut memiliki pengaruh yang paling signifikan dalam menentukan Sale Price. Skor penting ini dapat diinterpretasikan sebagai persentase kontribusi fitur tersebut dalam mempengaruhi Sale Price.
+
+Selanjutnya, "Commission Rate" memiliki skor penting sebesar 0.2916393396038089, yang menunjukkan bahwa fitur ini juga memiliki pengaruh yang cukup signifikan dalam menentukan Sale Price, meskipun tidak sebesar "Commission Earned".
+
+Fitur-fitur lainnya, seperti "Car Year", "Car Make_Nissan", "Car Make_Toyota", dan seterusnya, memiliki skor penting yang sangat kecil, bahkan mendekati nol. Hal ini menunjukkan bahwa fitur-fitur tersebut memiliki pengaruh yang relatif kecil atau kurang signifikan dalam memprediksi Sale Price.
+
+Dalam konteks ini, skor penting yang lebih tinggi menandakan bahwa fitur tersebut memiliki pengaruh yang lebih besar dalam menentukan Sale Price, sedangkan skor penting yang lebih rendah menandakan pengaruh yang lebih kecil.
+
+Dalam beberapa kasus, komisi yang diperoleh dan tingkat komisi yang diterapkan dapat mencerminkan karakteristik penjualan mobil tertentu. Misalnya, mobil dengan harga jual yang lebih tinggi mungkin memiliki komisi yang lebih besar, atau komisi yang diberikan untuk penjualan mobil tertentu mungkin lebih tinggi dibandingkan dengan mobil lainnya. Oleh karena itu, fitur-fitur ini dapat memberikan informasi penting dalam memprediksi Sale Price.
 
 ## REFERENSI
 
