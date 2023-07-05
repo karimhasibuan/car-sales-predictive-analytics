@@ -49,10 +49,22 @@ Berdasarkan dataset diatas, maka dapat diketahui variabel-variabel pada dataset 
 - **Car Model** merupakan model dari merk mobil yang dibeli.
 - **Car Year** merupakan tahun pembuatan mobil yang dibeli.
 - **Sale Price** merupakan harga mobil yang dijual dalam bentuk USD.
-- **Commision Rate** merupakan Tarif komisi yang dibayarkan kepada tenaga penjual atas penjualan tersebut.
-- **Commision Earned** merupakan Jumlah komisi yang diperoleh penjual atas penjualan tersebut.
+- **Commission Rate** merupakan Tarif komisi yang dibayarkan kepada tenaga penjual atas penjualan tersebut.
+- **Commission Earned** merupakan Jumlah komisi yang diperoleh penjual atas penjualan tersebut.
 
 Tahapan yang dilakukan dalam visualisasi data adalah melakukan visualisasi pada hasil exploratory data analysis seperti menemukan fitur-fitur yang relevan.
+
+## DATA PREPARATION
+
+Pada project ini, terdapat beberapa teknik data preparation yang digunakan, yaitu:
+
+- Melakukan EDA (Exploratory Data Analysis), bertujuan untuk mendapatkan informasi fitur mengenai dataset yang digunakan.
+- Melakukan pengecekan terhadap data yang null atau duplikat.
+- Melakukan drop pada kolom yang tidak relevan untuk diproses ke model seperti Date, Salesperson, Customer Name dan Year.
+- Melakukan Encoding pada variabel kategorikal yaitu kolom Car Make dan Car Model, bertujuan untuk mengkonversi variabel kategori menjadi angka atau vektor numerik yang mewakili kategori-kategori tersebut.
+- Melakukan Feature Scaling pada data numerik yaitu kolom Car Year, Commission Rate, dan Commission Earned menggunakan MinMaxScaler(), yang berfungsi untuk melakukan normalisasi dan standarisasi data.
+- Memisahkan kolom fitur dan target. Dalam hal ini, kolom fitur yaitu kolom selain Sale Price dan kolom target adalah Sale Price.
+- Membagi dataset yang telah melewati tahap preprocessing menjadi data latih dan data uji. Pembagian dibagi sebesar 80% untuk data latih dan 20% data uji.
 
 ## REFERENSI
 
