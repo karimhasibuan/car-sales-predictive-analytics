@@ -148,3 +148,5 @@ Lubis, A. N. (2004). Strategi Pemasaran dalam persaingan bisnis.
 Munawar, Z., Muliantara, A., Kmurawak, R. M., Reba, F., Sroyer, A., Sukmawan, D., ... & Beno, I. S. (2023). Big Data Analytics: Konsep, Implementasi, dan Aplikasi Terkini. Kaizen Media Publishing.
 
 Nikmatun, I. A., & Waspada, I. (2019). Implementasi data mining untuk klasifikasi masa studi mahasiswa menggunakan algoritma K-Nearest Neighbor. Simetris: Jurnal Teknik Mesin, Elektro dan Ilmu Komputer, 10(2), 421-432.
+
+---Ini adalah bagian akhir laporan---
