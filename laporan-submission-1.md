@@ -28,21 +28,21 @@ Oleh karena itu, penggunaan teknik _machine learning_ dalam menentukan harga mob
 
 ### Solution Approach
 
-Berdasarkan pernyataan masalah dan tujuan yang telah disebutkan, maka terdapat solusi yang diberikan yaitu dengan menggunakan 3 algoritma Machine Learning pada kasus model regresi sebagai berikut:
+Pada proyek ini, penulis menawarkan untuk menggunakan 3 algoritma dalam melakukan prediksi harga mobil dan menentukan algoritma yang paling baik prediksinya diantara lainnya. Adapun algoritma yang dipilih yaitu:
 
 - Regresi Linear
-
-  Regresi linear adalah salah satu algoritma yang paling sederhana dan paling umum digunakan dalam prediksi variabel kontinu. Keuntungan utama regresi linear adalah interpretabilitas yang tinggi. Model regresi linear memberikan pemahaman yang jelas tentang bagaimana setiap fitur (tipe, model, tahun mobil) berkontribusi terhadap prediksi harga mobil. Selain itu, regresi linear bekerja dengan baik ketika ada hubungan linier yang kuat antara fitur-fitur independen dan variabel dependen (Munawar et al., 2023).
-
 - Decision Tree
-
-  Decision tree adalah algoritma yang dapat memodelkan hubungan yang lebih kompleks antara fitur-fitur dan variabel target. Decision tree membagi dataset berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya, dan ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi linear ( Chris & Susilawati, 2020).
-
 - KNN (K-Nearest Neighbors)
 
-  KNN (K-Nearest Neighbors) adalah algoritma machine learning yang digunakan untuk klasifikasi dan regresi. Algoritma ini bekerja dengan mencari tetangga terdekat dari suatu data dan memprediksi berdasarkan mayoritas label atau rata-rata nilai tetangga terdekatnya. KNN dipilih karena kemampuannya yang sederhana, intuitif, dan mampu menangani hubungan lokal antara fitur dan target (Nikmatun & Waspada, 2019).
+Berikut adalah penjelasan yang lebih mendalam mengenai pemilihan ketiga algoritma (Regresi Linear, Decision Tree, KNN) sebagai solusi untuk memprediksi harga mobil dan bagaimana masing-masing algoritma dapat membantu menjawab pertanyaan masalah:
 
-Berdasarkan algoritma yang digunakan diatas, maka akan dilakukan evaluasi dan pengujian model menggunakan metrik evaluasi yang tepat seperti Mean Squared Error (MSE).
+- Regresi Linear: Algoritma ini dipilih karena sederhana dan memiliki interpretabilitas tinggi. Regresi linear dapat memberikan pemahaman yang jelas tentang kontribusi setiap fitur (tipe, model, tahun mobil) terhadap prediksi harga mobil. Dengan demikian, kita dapat mengidentifikasi variabel yang paling signifikan dalam menentukan harga.
+
+- Decision Tree: Algoritma ini dipilih karena kemampuannya untuk memodelkan hubungan yang kompleks antara fitur-fitur dan variabel target. Decision tree membagi dataset berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya. Hal ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi linear. Decision tree dapat membantu menggali hubungan non-linear antara fitur-fitur dan harga mobil.
+
+- KNN (K-Nearest Neighbors): Algoritma ini dipilih karena sifatnya yang sederhana, intuitif, dan mampu menangani hubungan lokal antara fitur-fitur dan target. KNN mencari tetangga terdekat dari suatu data dan memprediksi berdasarkan mayoritas label atau rata-rata nilai tetangga terdekatnya. KNN dapat membantu dalam mengidentifikasi pola lokal yang mungkin terdapat dalam data, sehingga dapat memberikan prediksi yang lebih akurat dalam kasus harga mobil.
+
+Pada proyek ini, matriks evaluasi yang digunakan adalah Mean Absolute Error (MAE) dan Mean Squared Error (MSE). Hal ini bertujuan untuk mengetahui kesalahan prediksi yang terkecil dari setiap algoritma yang digunakan.
 
 ## Data Understanding
 
