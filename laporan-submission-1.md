@@ -31,18 +31,18 @@ Oleh karena itu, penggunaan teknik _machine learning_ dalam menentukan harga mob
 Pada proyek ini, penulis menawarkan untuk menggunakan 3 algoritma dalam melakukan prediksi harga mobil dan menentukan algoritma yang paling baik prediksinya diantara lainnya. Adapun algoritma yang dipilih yaitu:
 
 - Regresi Linear
-- Decision Tree
-- KNN (K-Nearest Neighbors)
+- _Decision Tree_
+- KNN (_K-Nearest Neighbors_)
 
-Berikut adalah penjelasan yang lebih mendalam mengenai pemilihan ketiga algoritma (Regresi Linear, Decision Tree, KNN) sebagai solusi untuk memprediksi harga mobil dan bagaimana masing-masing algoritma dapat membantu menjawab pertanyaan masalah:
+Berikut adalah penjelasan yang lebih mendalam mengenai pemilihan ketiga algoritma (Regresi Linear, _Decision Tree_, KNN) sebagai solusi untuk memprediksi harga mobil dan bagaimana masing-masing algoritma dapat membantu menjawab pertanyaan masalah:
 
 - Regresi Linear: Algoritma ini dipilih karena sederhana dan memiliki interpretabilitas tinggi. Regresi linear dapat memberikan pemahaman yang jelas tentang kontribusi setiap fitur (tipe, model, tahun mobil) terhadap prediksi harga mobil. Dengan demikian, kita dapat mengidentifikasi variabel yang paling signifikan dalam menentukan harga.
 
-- Decision Tree: Algoritma ini dipilih karena kemampuannya untuk memodelkan hubungan yang kompleks antara fitur-fitur dan variabel target. Decision tree membagi dataset berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya. Hal ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi linear. Decision tree dapat membantu menggali hubungan non-linear antara fitur-fitur dan harga mobil.
+- _Decision Tree_: Algoritma ini dipilih karena kemampuannya untuk memodelkan hubungan yang kompleks antara fitur-fitur dan variabel target. _Decision tree_ membagi _dataset_ berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya. Hal ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi linear. _Decision tree_ dapat membantu menggali hubungan non-linear antara fitur-fitur dan harga mobil.
 
-- KNN (K-Nearest Neighbors): Algoritma ini dipilih karena sifatnya yang sederhana, intuitif, dan mampu menangani hubungan lokal antara fitur-fitur dan target. KNN mencari tetangga terdekat dari suatu data dan memprediksi berdasarkan mayoritas label atau rata-rata nilai tetangga terdekatnya. KNN dapat membantu dalam mengidentifikasi pola lokal yang mungkin terdapat dalam data, sehingga dapat memberikan prediksi yang lebih akurat dalam kasus harga mobil.
+- KNN (_K-Nearest Neighbors_): Algoritma ini dipilih karena sifatnya yang sederhana, intuitif, dan mampu menangani hubungan lokal antara fitur-fitur dan target. KNN mencari tetangga terdekat dari suatu data dan memprediksi berdasarkan mayoritas label atau rata-rata nilai tetangga terdekatnya. KNN dapat membantu dalam mengidentifikasi pola lokal yang mungkin terdapat dalam data, sehingga dapat memberikan prediksi yang lebih akurat dalam kasus harga mobil.
 
-Pada proyek ini, matriks evaluasi yang digunakan adalah Mean Absolute Error (MAE) dan Mean Squared Error (MSE). Hal ini bertujuan untuk mengetahui kesalahan prediksi yang terkecil dari setiap algoritma yang digunakan.
+Pada proyek ini, matriks evaluasi yang digunakan adalah _Mean Absolute Error_ (MAE) dan _Mean Squared Error_ (MSE). Hal ini bertujuan untuk mengetahui kesalahan prediksi yang terkecil dari setiap algoritma yang digunakan.
 
 ## Data Understanding
 
