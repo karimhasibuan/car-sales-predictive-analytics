@@ -46,25 +46,33 @@ Pada proyek ini, matriks evaluasi yang digunakan adalah _Mean Absolute Error_ (M
 
 ## Data Understanding
 
-Dataset yang digunakan pada proyek machine learning ini adalah [Car Sales Data](https://www.kaggle.com/datasets/suraj520/car-sales-data) yang bersumber dari Kaggle. Dataset ini berisi informasi tentang penjualan mobil dari dealer mobil selama setahun.
+_Dataset_ yang digunakan pada proyek _machine learning_ ini adalah [_Car Sales Data_](https://www.kaggle.com/datasets/suraj520/car-sales-data) yang bersumber dari situs Kaggle. _Dataset_ ini berisi 2.500.000 baris informasi tentang penjualan mobil dari _dealer_ mobil selama setahun. _Dataset_ mencakup sembilan kolom data untuk setiap penjualan mobil. Berikut penjelasan dari setiap kolom yang dimiliki oleh _dataset_ ini.
 
-Berdasarkan dataset diatas, maka dapat diketahui variabel-variabel pada dataset tersebut yaitu sebagai berikut:
+- **_Date_** merupakan data tanggal penjualan mobil dilakukan.
+- **_Salesperson_** merupakan data nama penjual yang melakukan penjualan.
+- **_Customer Name_** merupakan data nama pelanggan yang membeli mobil.
+- **_Car Make_** merupakan data merk mobil yang dibeli seperti, Toyota, Honda, Ford, Chevrolet, atau Nissan.
+- **_Car Model_** merupakan data model dari merk mobil yang dibeli seperti, Corolla, Civic, F-150, Silverado, atau Altima.
+- **_Car Year_** merupakan data tahun pembuatan mobil yang dibeli, mulai dari tahun 2010 hingga 2022.
+- **_Sale Price_** merupakan data harga mobil yang dijual dalam bentuk USD.
+- **_Commission Rate_** merupakan tingkat komisi yang dibayarkan kepada penjual atas penjualan, nilainya berkisar 0,05-0,15.
+- **_Commission Earned_** merupakan Jumlah komisi yang diperoleh penjual atas penjualan tersebut.
 
-- **Date** merupakan tanggal penjualan mobil.
-- **Salesperson** merupakan nama penjual yang melakukan penjualan.
-- **Customer Name** merupakan nama pelanggan yang membeli mobil.
-- **Car Make** merupakan merk mobil yang dibeli.
-- **Car Model** merupakan model dari merk mobil yang dibeli.
-- **Car Year** merupakan tahun pembuatan mobil yang dibeli.
-- **Sale Price** merupakan harga mobil yang dijual dalam bentuk USD.
-- **Commission Rate** merupakan Tarif komisi yang dibayarkan kepada tenaga penjual atas penjualan tersebut.
-- **Commission Earned** merupakan Jumlah komisi yang diperoleh penjual atas penjualan tersebut.
+Kolom '_Car Make_', '_Car Model_' dan '_Car Year_' merupakan variabel yang berhubungan dengan mobil yang dijual.
 
-Tahapan yang dilakukan dalam visualisasi data adalah melakukan visualisasi pada hasil exploratory data analysis seperti menemukan fitur-fitur yang relevan.
+Kumpulan data ini berguna untuk menganalisis tren penjualan mobil dari waktu ke waktu dan menganalisis dampak dari berbagai faktor pada penjualan mobil. Hal ini yang menjadikan penulis menggunakan _dataset_ ini sebagai sumber data yang digunakan pada proyek.
+
+Contoh visualisasi data yang digunakan adalah diantaranya sebagai berikut:
+
+- Bar Chart
+
+- Line Chart
+
+Grafik-grafik diatas akan digunakan dalam melakukan visualisasi pada hasil _Exploratory Data Analysis_ (EDA).
 
 ## DATA PREPARATION
 
-Pada project ini, terdapat beberapa teknik data preparation yang digunakan, yaitu:
+Tahapan _data preparation_ dapat dilakukan sebagai berikut:
 
 - Melakukan EDA (Exploratory Data Analysis), bertujuan untuk mendapatkan informasi fitur mengenai dataset yang digunakan.
 - Melakukan pengecekan terhadap data yang null atau duplikat.
@@ -156,11 +164,5 @@ Dalam beberapa kasus, komisi yang diperoleh dan tingkat komisi yang diterapkan d
 [[4]](https://ejournal.unsrat.ac.id/index.php/emba/article/view/21893) G. A. Taroreh, L. Mananeke, and F. Roring, “ANALISIS STRATEGI PEMASARAN DALAM MENINGKATKAN VOLUME PENJUALAN MOBIL MITSUBISHI XPANDER PADA PT. BOSOWA BERLIANMOTOR KAIRAGI MARKETING STRATEGY ANALYSIS IN INCREASING THE SALES VOLUME OF MITSUBISHI XPANDER CARS AT PT. BOSOWA BERLIAN MOTOR KAIRAGI,” Analisis Strategi…… 3683 Jurnal EMBA, vol. 6, no. 4, pp. 3683–3692, 2018.
 
 [[5]](https://slims.ahmaddahlan.ac.id/index.php?p=fstream-pdf&fid=40&bid=3192) I. Daqiqil, MACHINE LEARNING: Teori, Studi Kasus Dan Implementasi Menggunakan Python. Riau, Universitas Riau: UR Press, 2021.
-
-Chris, S., & Susilawati, D. (2020). Analisis Perancangan Sistem untuk Kepuasan Pelanggan pada UD. Shinta Elektronic dengan Menggunakan Metode Algoritma C4. 5. ALGOR, 1(2), 52-58.
-
-Munawar, Z., Muliantara, A., Kmurawak, R. M., Reba, F., Sroyer, A., Sukmawan, D., ... & Beno, I. S. (2023). Big Data Analytics: Konsep, Implementasi, dan Aplikasi Terkini. Kaizen Media Publishing.
-
-Nikmatun, I. A., & Waspada, I. (2019). Implementasi data mining untuk klasifikasi masa studi mahasiswa menggunakan algoritma K-Nearest Neighbor. Simetris: Jurnal Teknik Mesin, Elektro dan Ilmu Komputer, 10(2), 421-432.
 
 ---Ini adalah bagian akhir laporan---
