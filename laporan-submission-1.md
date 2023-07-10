@@ -379,25 +379,55 @@ Dengan menggunakan nilai parameter _default_ pada ketiga algoritma, maka kita da
 
 ## EVALUATION
 
-Pada project ini, matriks evaluasi yang digunakan dalam proyek ini adalah Mean Squared Error (MSE). MSE digunakan sebagai ukuran kesalahan antara nilai prediksi dan nilai sebenarnya dalam kasus regresi. Semakin kecil nilai MSE, semakin baik model dalam melakukan prediksi yang akurat. Dalam kasus ini, tiga algoritma telah dievaluasi yaitu Regresi Linier, Decision Tree, dan KNN.
+Dalam proyek ini, matriks evaluasi yang digunakan adalah _Mean Squared Error_ (MSE) dan _Mean Absolute Error_ (MAE). MSE digunakan sebagai ukuran kesalahan antara nilai prediksi dan nilai sebenarnya dalam kasus regresi. Semakin kecil nilai MSE, semakin baik model dalam melakukan prediksi yang akurat. MAE juga digunakan sebagai ukuran kesalahan, tetapi memberikan perhitungan kesalahan yang lebih "absolut" daripada MSE.
 
-[![mse-reports.png](https://i.postimg.cc/5Nw2y7fn/mse-reports.png)](https://postimg.cc/ZC5SDLBd)
+Dalam evaluasi model, tiga algoritma yaitu Regresi Linier, _Decision Tree_, dan KNN telah dievaluasi menggunakan kedua metrik tersebut. Dengan membandingkan nilai MSE dan MAE dari masing-masing algoritma maka dapat ditentukan algoritma mana yang memberikan prediksi yang lebih akurat dan sesuai dengan tujuan proyek. Hasil dari penggunaan MSE dan MAE dapat dilihat pada Tabel 14:
 
-Berdasarkan hasil diatas, dapat diketahui bahwa Decision Tree maupun KNN memberikan hasil prediksi yang lebih baik dengan nilai MSE yang lebih rendah dibandingkan Regresi Linier. Oleh karena itu, untuk dataset ini, model Decision Tree dan KNN lebih disarankan untuk digunakan dalam melakukan prediksi Sale Price.
+Tabel 14. Hasil evaluasi MSE dan MAE.
+
+|     Model      |      MSE       |    MAE    |
+| :------------: | :------------: | :-------: |
+| Regresi Linier | 25429158814.05 | 137809.55 |
+| Decision Tree  |  532215260.84  | 19978.21  |
+|      KNN       |  458917127.95  | 18142.63  |
+
+Dari hasil evaluasi pada Tabel 14, dapat dilihat bahwa model Regresi Linier memiliki MSE yang sangat tinggi, menunjukkan tingkat kesalahan yang besar dalam memprediksi harga mobil. Model _Decision Tree_ dan KNN memiliki MSE yang lebih rendah, menunjukkan performa yang lebih baik dalam memprediksi harga mobil.
+
+Dalam hal MAE, model _Decision Tree_ dan KNN memiliki tingkat kesalahan yang lebih rendah dibandingkan dengan model Regresi Linier, menunjukkan keakuratan yang lebih baik dalam memprediksi harga mobil. Oleh karena itu, untuk dataset ini, model _Decision Tree_ dan KNN lebih disarankan untuk digunakan dalam melakukan prediksi harga mobil.
+
+Gambar 8. Hasil prediksi harga asli menggunakan ketiga algoritma yang digunakan.
 
 [![sale-predict.png](https://i.postimg.cc/J4TdNm7n/sale-predict.png)](https://postimg.cc/6yv0KkvJ)
 
-Berdasarkan hasil pengujian prediksi diatas, memang hasil pada algoritma Decision Tree yang paling mendekati kemudian disusul oleh KNN dan ada algoritma Regresi Linier. Meski begitu, hasil prediksi masih jauh dari nilai asli.
+Berdasarkan hasil pengujian prediksi harga mobil pada Gambar 8 diatas, data diketahui hasil prediksi pada algoritma _Decision Tree_ yang paling mendekati kemudian disusul oleh KNN dan Regresi Linier. Meski begitu, hasil prediksi masih jauh dari nilai asli. Berikut fitur yang paling berpengaruh dalam menentukan harga mobil dapat dilihat pada Tabel 15.
 
-[![important-feature.png](https://i.postimg.cc/BZPxY0Cb/important-feature.png)](https://postimg.cc/kD96GLzP)
+Tabel 15. Fitur yang paling berpengaruh dalam menentukan harga mobil.
 
-Hasil yang didapatkan menunjukkan skor pentingnya fitur dalam menentukan Sale Price. Setiap fitur memiliki skor penting yang dinyatakan sebagai angka.
+| Fitur               | Importance Score      |
+| ------------------- | --------------------- |
+| Commission Earned   | 0.7083596131830072    |
+| Commission Rate     | 0.2916393378207174    |
+| Car Year            | 3.55698297028073e-07  |
+| Car Make_Honda      | 7.013526072413751e-08 |
+| Car Make_Chevrolet  | 7.011923623450332e-08 |
+| Car Make_Nissan     | 6.991766843127469e-08 |
+| Car Model_Corolla   | 6.962389941150295e-08 |
+| Car Make_Toyota     | 6.95229435721429e-08  |
+| Car Model_Altima    | 6.931034801210895e-08 |
+| Car Make_Ford       | 6.904791528382239e-08 |
+| Car Model_F-150     | 6.888334649110333e-08 |
+| Car Model_Civic     | 6.875956488531319e-08 |
+| Car Model_Silverado | 6.7977795174018e-08   |
 
-Misalnya, "Commission Earned" memiliki skor penting sebesar 0.7083596164141285, yang berarti fitur tersebut memiliki pengaruh yang paling signifikan dalam menentukan Sale Price. Skor penting ini dapat diinterpretasikan sebagai persentase kontribusi fitur tersebut dalam mempengaruhi Sale Price.
+Hasil yang didapatkan menunjukkan skor pentingnya fitur dalam menentukan harga mobil. Setiap fitur memiliki skor penting yang dinyatakan sebagai angka.
 
-Selanjutnya, "Commission Rate" memiliki skor penting sebesar 0.2916393396038089, yang menunjukkan bahwa fitur ini juga memiliki pengaruh yang cukup signifikan dalam menentukan Sale Price, meskipun tidak sebesar "Commission Earned".
+Misalnya, '_Commission Earned_' memiliki skor penting sebesar 0.7083596164141285, yang berarti fitur tersebut memiliki pengaruh yang paling signifikan dalam menentukan harga mobil. Skor penting ini dapat diinterpretasikan sebagai persentase kontribusi fitur tersebut dalam mempengaruhi data pada kolom '_Sale Price_'.
 
-Fitur-fitur lainnya, seperti "Car Year", "Car Make_Nissan", "Car Make_Toyota", dan seterusnya, memiliki skor penting yang sangat kecil, bahkan mendekati nol. Hal ini menunjukkan bahwa fitur-fitur tersebut memiliki pengaruh yang relatif kecil atau kurang signifikan dalam memprediksi Sale Price.
+Selanjutnya, '_Commission Rate_' memiliki skor penting sebesar 0.2916393396038089, yang menunjukkan bahwa fitur ini juga memiliki pengaruh yang cukup signifikan dalam menentukan harga mobil, meskipun tidak sebesar '_Commission Earned_'.
+
+Fitur-fitur lainnya, seperti '_Car Year_', '_Car Model_' dan '_Car Make_' memiliki skor penting yang sangat kecil, bahkan mendekati nol. Hal ini menunjukkan bahwa fitur-fitur tersebut memiliki pengaruh yang relatif kecil atau kurang signifikan dalam memprediksi harga mobil.
+
+## CONCLUSION
 
 Dalam konteks ini, skor penting yang lebih tinggi menandakan bahwa fitur tersebut memiliki pengaruh yang lebih besar dalam menentukan Sale Price, sedangkan skor penting yang lebih rendah menandakan pengaruh yang lebih kecil.
 
