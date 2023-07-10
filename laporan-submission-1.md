@@ -18,7 +18,7 @@ Oleh karena itu, penggunaan teknik _machine learning_ dalam menentukan harga mob
 
 ### Problem Statements
 
-- Faktor apa yang paling berpengaruh terhadap harga penjualan mobil?
+- Faktor apa yang paling berpengaruh dalam menentukan prediksi harga penjualan mobil?
 - Bagaimana pendekatan _machine learning_ dapat digunakan untuk memprediksi harga mobil berdasarkan faktor-faktor yang berpengaruh tersebut?
 
 ### Goals
@@ -428,10 +428,6 @@ Selanjutnya, '_Commission Rate_' memiliki skor penting sebesar 0.291639339603808
 Fitur-fitur lainnya, seperti '_Car Year_', '_Car Model_' dan '_Car Make_' memiliki skor penting yang sangat kecil, bahkan mendekati nol. Hal ini menunjukkan bahwa fitur-fitur tersebut memiliki pengaruh yang relatif kecil atau kurang signifikan dalam memprediksi harga mobil.
 
 ## CONCLUSION
-
-Dalam konteks ini, skor penting yang lebih tinggi menandakan bahwa fitur tersebut memiliki pengaruh yang lebih besar dalam menentukan Sale Price, sedangkan skor penting yang lebih rendah menandakan pengaruh yang lebih kecil.
-
-Dalam beberapa kasus, komisi yang diperoleh dan tingkat komisi yang diterapkan dapat mencerminkan karakteristik penjualan mobil tertentu. Misalnya, mobil dengan harga jual yang lebih tinggi mungkin memiliki komisi yang lebih besar, atau komisi yang diberikan untuk penjualan mobil tertentu mungkin lebih tinggi dibandingkan dengan mobil lainnya. Oleh karena itu, fitur-fitur ini dapat memberikan informasi penting dalam memprediksi Sale Price.
 
 ## REFERENSI
 
