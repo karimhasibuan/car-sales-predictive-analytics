@@ -90,7 +90,7 @@ Tahapan _data preparation_ dapat dilakukan sebagai berikut:
 
 **1. Melakukan EDA (_Exploratory Data Analysis_)**, bertujuan untuk mendapatkan informasi fitur mengenai _dataset_ yang digunakan.
 
-> Menampilkan beberapa isi data yaitu dengan menampilkan 5 data teratas dan 5 data terakhir. Hasilnya dapat dilihat pada Tabel 1 berikut.
+**1a. Menampilkan beberapa isi data yaitu dengan menampilkan 5 data teratas dan 5 data terakhir. Hasilnya dapat dilihat pada Tabel 1 berikut.**
 
 Tabel 1. 5 data teratas dan terbawah dari _Car Sales Dataset_.
 
@@ -109,7 +109,7 @@ Tabel 1. 5 data teratas dan terbawah dari _Car Sales Dataset_.
 
 Tabel 1 merupakan gabungan dari 5 data teratas dan 5 data terbawah. Hal ini bertujuan untuk mengetahui perwakilan isi data.
 
-> Melakukan pengecekan tipe data pada setiap kolom.
+**1b. Melakukan pengecekan tipe data pada setiap kolom.**
 
 Tabel 2. Nama kolom dan tipe data dari _dataset_ yang digunakan.
 | # | Column | Dtype |
@@ -126,7 +126,7 @@ Tabel 2. Nama kolom dan tipe data dari _dataset_ yang digunakan.
 
 Tabel 2 memberikan informasi tentang struktur dataset yang terdiri dari 9 kolom. Kolom '_Date_', '_Salesperson_', '_Customer Name_', '_Car Make_' dan '_Car Model_' memiliki tipe data `object` yang merupakan tipe data kategori. Sedangkan, kolom '_Car Year_' dan '_Sale Price_' memiliki tipe data `int64` serta kolom '_Commission Rate_' dan '_Commission Earned_' memiliki tipe data `float64` yang merupakan tipe data numerik.
 
-> Menampilkan distribusi data pada kolom yang merupakan tipe data numerik.
+**1c. Menampilkan distribusi data pada kolom yang merupakan tipe data numerik.**
 
 Tabel 3. Distribusi data pada kolom numerik.
 
@@ -154,7 +154,7 @@ Tabel 3 menyajikan informasi statistik tentang empat kolom numerik dalam _datase
 
 Informasi ini memberikan gambaran tentang sebaran dan karakteristik data dalam kolom-kolom numerik seperti melihat nilai rata-rata, rentang nilai, dan deviasi standar dari '_Sale Price_', yang mengindikasikan variasi harga jual mobil dalam _dataset_.
 
-> Melakukan pengecekan terhadap data yang _null_ atau duplikat, yang bertujuan untuk mengidentifikasi data yang tidak lengkap atau mengandung duplikasi. Hasilnya dapat dilihat pada Tabel 4 berikut.
+**1d. Melakukan pengecekan terhadap data yang _null_ atau duplikat, yang bertujuan untuk mengidentifikasi data yang tidak lengkap atau mengandung duplikasi. Hasilnya dapat dilihat pada Tabel 4 berikut.**
 
 Tabel 4. Jumlah data _null_ pada setiap kolom.
 
@@ -172,7 +172,7 @@ Tabel 4. Jumlah data _null_ pada setiap kolom.
 
 Informasi yang didapatkan dari Tabel 4 adalah bahwa tidak ada nilai _null_ (_missing value_) pada setiap kolom dalam _dataset_. Hal ini menunjukkan bahwa _dataset_ memiliki data lengkap untuk setiap kolom.
 
-> Memeriksa apakah terdapat nilai 0 pada kolom '_Car Year_' dan '_Sale Price_'. Hal ini dilakukan karena tidak mungkin tahun pembuatan dan harga mobil bernilai 0. Hasilnya dapat dilihat pada tabel 5 berikut.
+**1e. Memeriksa apakah terdapat nilai 0 pada kolom '_Car Year_' dan '_Sale Price_'. Hal ini dilakukan karena tidak mungkin tahun pembuatan dan harga mobil bernilai 0. Hasilnya dapat dilihat pada tabel 5 berikut.**
 
 Tabel 5. Jumlah nilai 0 pada kolom '_Car Year_' dan '_Sale Price_'.
 
@@ -183,7 +183,7 @@ Tabel 5. Jumlah nilai 0 pada kolom '_Car Year_' dan '_Sale Price_'.
 
 Berdasarkan Tabel 5 dapat diketahui bahwa tidak ada nilai 0 pada kolom '_Car Year_' dan '_Sale Price_'. Hal ini menunjukkan bahwa dalam _dataset_ memiliki data yang rasional.
 
-> Memeriksa data _outlier_ menggunakan metode IQR (_Interquartile Range_) dan menghapus data yang _outlier_ pada data numerik yaitu '_Car Year_', '_Sale Price_', '_Commission Rate_', dan '_Commission Earned_'.
+**1f. Memeriksa data _outlier_ menggunakan metode IQR (_Interquartile Range_) dan menghapus data yang _outlier_ pada data numerik yaitu '_Car Year_', '_Sale Price_', '_Commission Rate_', dan '_Commission Earned_'.**
 
 [![boxplot-dataoutliers.png](https://i.postimg.cc/PrTvy9X8/boxplot-dataoutliers.png)](https://postimg.cc/XX1v72yV)
 
@@ -202,7 +202,7 @@ Tabel 6. Jumlah data _outlier_ pada data numerik.
 
 Berdasarkan Tabel 6, dapat diketahui bahwa pada kolom '_Car Year_', '_Sale Price_' dan '_Commission Rate_' tidak terdapat _outlier_, sedangkan pada kolom '_Commission Earned_' terdapat 3432 data yang dianggap sebagai _outlier_. Hal ini menunjukkan bahwa nilai-nilai pada kolom '_Commission Earned_' memiliki variasi yang lebih besar dibandingkan dengan kolom lainnya. Data outlier tersebut akan dihapus untuk mengurangi bias pada data. Setelah data outlier dihapus maka total data saat ini adalah 2496568. Jumlah data saat ini akan digunakan untuk melihat distribusi data pada setiap kolom dan diteruskan ke tahap pembentukan model.
 
-> Melihat frekuensi data berdasarkan kolom '_Date_'.
+**1g. Melihat frekuensi data berdasarkan kolom '_Date_'.**
 
 [![frequency-of-date.png](https://i.postimg.cc/fTTt6byf/frequency-of-date.png)](https://postimg.cc/YjZCFM1v)
 
