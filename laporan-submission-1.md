@@ -219,11 +219,148 @@ Tabel 7. Frekuensi data berdasarkan tahun.
 
 Berdasarkan Tabel 7, dapat dilihat bahwa pada tahun penjualan lebih banyak terjadi pada tahun 2022 dengan frekuensi sebanyak 1.672.227 data dibandingkan dengan tahun 2023 dengan jumlah frekuensi sebanyak 824.341 data.
 
-3. Melakukan drop pada kolom yang tidak relevan untuk diproses ke model seperti Date, Salesperson, Customer Name dan Year.
-4. Melakukan Encoding pada variabel kategorikal yaitu kolom Car Make dan Car Model, bertujuan untuk mengkonversi variabel kategori menjadi angka atau vektor numerik yang mewakili kategori-kategori tersebut.
-5. Melakukan Feature Scaling pada data numerik yaitu kolom Car Year, Commission Rate, dan Commission Earned menggunakan MinMaxScaler(), yang berfungsi untuk melakukan normalisasi dan standarisasi data.
-6. Memisahkan kolom fitur dan target. Dalam hal ini, kolom fitur yaitu kolom selain Sale Price dan kolom target adalah Sale Price.
-7. Membagi dataset yang telah melewati tahap preprocessing menjadi data latih dan data uji. Pembagian dibagi sebesar 80% untuk data latih dan 20% data uji.
+**1h. Analisis _sales_ yang paling banyak melakukan penjualan dan _customer_ yang paling banyak melakukan pembelian.**
+
+Tabel 8. Frekuensi penjualan _sales_.
+
+| Salesperson      | Frequency |
+| ---------------- | --------- |
+| Michael Smith    | 1227      |
+| Michael Johnson  | 976       |
+| David Smith      | 821       |
+| James Smith      | 795       |
+| Michael Williams | 752       |
+
+Tabel 8 menunjukkan frekuensi masing-masing _sales_. _Sales_ dengan nama "Michael Smith" memiliki frekuensi tertinggi, yaitu sebanyak 1227 data. Diikuti oleh "Michael Johnson" dengan frekuensi 976, "David Smith" dengan frekuensi 821, "James Smith" dengan frekuensi 795, dan "Michael Williams" dengan frekuensi 752.
+
+Tabel 9. Frekuensi pembelian pada _customer_.
+
+| Customer Name   | Frequency |
+| --------------- | --------- |
+| Michael Smith   | 1163      |
+| Michael Johnson | 889       |
+| David Smith     | 795       |
+| James Smith     | 788       |
+| Jennifer Smith  | 786       |
+
+Tabel 9 menunjukkan frekuensi masing-masing nama pelanggan dalam _dataset_. Nama pelanggan "Michael Smith" memiliki frekuensi tertinggi, yaitu sebanyak 1163 data. Diikuti oleh "Michael Johnson" dengan frekuensi 889, "David Smith" dengan frekuensi 795, "James Smith" dengan frekuensi 788, dan "Jennifer Smith" dengan frekuensi 786.
+
+Berdasarkan Tabel 8 dan Tabel 9, dapat diketahui bahwa ternyata memiliki kesamaan untuk jumlah frekuensi tertinggi. Oleh karena itu, perlu diketahui nama yang terdapat pada kolom '_Salesperson_' dan '_Customer Name_' dengan cara sebagai berikut:
+
+```
+salesperson_names = set(dataset['Salesperson'].unique())
+customer_names = set(dataset['Customer Name'].unique())
+combined_names = salesperson_names.union(customer_names)
+total_names = len(combined_names)
+print("Nama-nama yang ada pada kedua kolom Salesperson dan Customer Name:")
+for name in combined_names:
+    print(name)
+print("Jumlah nama yang muncul pada kedua kolom:", total_names)
+```
+
+Kode diatas berfungsi untuk menampilkan daftar nama yang terdapat pada kolom '_Salesperson_' dan '_Customer Name_' dengan menggunanakan `.union()`. Hasilnya dapat dilihat pada Gambar 6 berikut.
+
+Gambar 6. Hasil pencarian data '_Salesperson_' dan '_Customer Name_' menggunakan _union function_.
+
+[![union-sales-and-customer.png](https://i.postimg.cc/9MwrYwg0/union-sales-and-customer.png)](https://postimg.cc/JDmr10LC)
+
+Pada Gambar 6, dapat diketahui bahwa terdapat 698362 nama yang merupakan bagian dari _Sales_ dan _Customer_.
+
+**1i. Analisis pada kolom '_Car Make_' dan '_Car Model_' serta mencari merk dan model mobil yang paling mahal dan murah.**
+
+Tabel 10. Frekuensi data pada kolom '_Car Make_'.
+
+| Car Make  | Frequency |
+| --------- | --------- |
+| Honda     | 500048    |
+| Chevrolet | 499719    |
+| Toyota    | 499491    |
+| Ford      | 499072    |
+| Nissan    | 498238    |
+
+Tabel 10 menunjukkan frekuensi masing-masing merek mobil. Merek "Honda" memiliki frekuensi tertinggi, yaitu sebanyak 500.048 data. Diikuti oleh merek "Chevrolet" dengan frekuensi 499.719, "Toyota" dengan frekuensi 499.491, "Ford" dengan frekuensi 499.072, dan "Nissan" dengan frekuensi 498.238. Dari data tersebut, dapat diketahui bahwa merek "Honda" merupakan merek mobil yang paling banyak diminati.
+
+Tabel 11. Frekuensi data pada kolom '_Car Model_'.
+
+| Car Model | Frequency |
+| --------- | --------- |
+| Silverado | 500114    |
+| Civic     | 499833    |
+| Corolla   | 499483    |
+| F-150     | 498984    |
+| Altima    | 498154    |
+
+Tabel 11 menunjukkan frekuensi masing-masing model mobil. Model "Silverado" memiliki frekuensi tertinggi, yaitu sebanyak 500.114 data. Diikuti oleh model "Civic" dengan frekuensi 499.833, "Corolla" dengan frekuensi 499.483, "F-150" dengan frekuensi 498.984, dan "Altima" dengan frekuensi 498.154. Dari data tersebut, dapat diketahui bahwa model "Silverado" merupakan model mobil yang paling banyak diminati.
+
+Gambar 7. Grafik penjualan mobil berdasarkan tahun pembuatan mobil.
+
+[![car-distribution.png](https://i.postimg.cc/QxgCx3WB/car-distribution.png)](https://postimg.cc/crH0XPhZ)
+
+Berdasarkan Gambar 7, dapat diketahui bahwa mobil dengan pembuatan tahun 2013 merupakan yang paling laku dan tahun 2022 merupakan tahun mobil yang paling sedikit dibandingkan yang lainnya.
+
+Tabel 12. Data mobil paling mahal dan murah.
+
+| Merk Mobil | Model Mobil | Tahun Mobil | Harga  |
+| ---------- | ----------- | ----------- | ------ |
+| Nissan     | F-150       | 2013        | 50,000 |
+| Nissan     | Altima      | 2012        | 10,000 |
+
+Tabel 12 menunjukkan informasi tentang mobil dengan harga paling mahal dan paling murah dalam _dataset_. Mobil dengan harga paling mahal adalah Nissan F-150 tahun 2013 dengan harga 50,000, sedangkan mobil dengan harga paling murah adalah Nissan Altima tahun 2012 dengan harga 10,000.
+
+**2. Melakukan drop pada kolom yang tidak relevan untuk diproses ke model seperti kolom '_Date_', '_Salesperson_', '_Customer Name_' dan '_Year_'.**
+
+Kolom-kolom tersebut dihapus dikarenakan alasan berikut:
+
+- '_Date_': Tanggal penjualan dianggap tidak relevan dalam memprediksi harga mobil, karena tanggalnya tidak memberikan informasi yang signifikan terkait faktor-faktor yang mempengaruhi harga mobil seperti merk, model, atau tahun mobil.
+
+- '_Salesperson_' dan '_Customer Name_': Nama penjual dan nama pelanggan tidak memberikan kontribusi yang signifikan terhadap prediksi harga mobil.
+
+- '_Year_': Kolom '_Year_' merupakan sebuah kolom baru yang terbentuk dari kolom '_Date_'. Sehingga kolom ini merupakan bagian yang sama dari kolom '_Date_'.
+
+Dengan menghapus kolom-kolom tersebut, fokus pembentukan model untuk prediksi dapat difokuskan pada variabel yang dianggap lebih penting dan memiliki hubungan yang lebih erat dengan harga mobil, seperti merk, model, tahun, dan atribut lain yang dianggap lebih relevan.
+
+**3. Melakukan Teknik _Encoding_ pada variabel kategorikal yaitu kolom '_Car Make_' dan '_Car Model_'.**
+
+```
+encoded_dataset = pd.get_dummies(dataset, columns=['Car Make', 'Car Model'])
+print(encoded_dataset)
+```
+
+Teknik _encoding_ yang digunakan disebut sebagai "_One-Hot Encoding_" dengan menggunakan fungsi `get_dummies()` dari _library_ pandas. Teknik ini digunakan untuk mengubah variabel kategorikal menjadi representasi numerik dalam bentuk kolom biner (0 dan 1) [[10]](https://www.mdpi.com/1099-4300/23/10/1258).Kolom '_Car Make_' dan '_Car Model_' dijadikan sebagai variabel kategorikal yang akan di-_encode_ sehingga hasilnya dapat dilihat pada Tabel 13.
+
+Tabel 13. Contoh hasil penerapan metode _One-Hot Encoding_ pada data.
+
+| Car Year | Sale Price | Commission Rate | Commission Earned | Car Make_Chevrolet | Car Make_Ford | Car Make_Honda | Car Make_Nissan | Car Make_Toyota | Car Model_Altima | Car Model_Civic | Car Model_Corolla | Car Model_F-150 | Car Model_Silverado |
+| -------- | ---------- | --------------- | ----------------- | ------------------ | ------------- | -------------- | --------------- | --------------- | ---------------- | --------------- | ----------------- | --------------- | ------------------- |
+| 2018     | 15983      | 0.070495        | 1126.73           | 0                  | 0             | 0              | 1               | 0               | 1                | 0               | 0                 | 0               | 0                   |
+| 2016     | 38474      | 0.134439        | 5172.40           | 0                  | 0             | 0              | 1               | 0               | 0                | 0               | 0                 | 1               | 0                   |
+| 2016     | 33340      | 0.114536        | 3818.63           | 0                  | 1             | 0              | 0               | 0               | 0                | 1               | 0                 | 0               | 0                   |
+| 2013     | 41937      | 0.092191        | 3866.20           | 0                  | 1             | 0              | 0               | 0               | 1                | 0               | 0                 | 0               | 0                   |
+| 2022     | 20256      | 0.113490        | 2298.85           | 0                  | 0             | 1              | 0               | 0               | 0                | 0               | 0                 | 0               | 1                   |
+
+Tabel 13 merupakan representasi data setelah dilakukan _encoding_ menggunakan metode _One-Hot Encoding_. Kolom-kolom dengan nama '_Car Make_' dan '_Car Model_' dipecah menjadi kolom-kolom baru sesuai dengan nilai unik yang ada. Nilai 1 pada kolom-kolom tersebut menunjukkan keberadaan nilai tersebut dalam data, sedangkan nilai 0 menunjukkan ketiadaan nilai tersebut. Hal ini memudahkan dalam representasi data kategorikal menjadi data numerik yang dapat digunakan dalam pemodelan _machine learning_.
+
+**4. Melakukan _Feature Scaling_ pada data numerik yaitu kolom '_Car Year_', '_Commission Rate_', dan '_Commission Earned_' menggunakan `MinMaxScaler()`.**
+
+Metode _MinMaxScaler_ bekerja dengan mengubah setiap nilai dalam kolom menjadi nilai antara 0 dan 1, dengan mempertahankan proporsi relatif antara nilai-nilai tersebut. Tujuan dari _Feature Scaling_ adalah untuk memastikan bahwa semua fitur atau kolom memiliki pengaruh yang seimbang pada proses pemodelan dan mencegah fitur yang memiliki rentang nilai yang lebih besar mendominasi fitur lainnya.
+
+Dengan melakukan Feature Scaling pada data numerik dapat membantu meningkatkan performa model dalam beberapa cara seperti berikut [[11]](https://ieeexplore.ieee.org/abstract/document/9898687) :
+
+1. Menghilangkan perbedaan skala: Beberapa algoritma _machine learning_, seperti regresi linear dan KNN, mengasumsikan bahwa semua fitur memiliki skala yang serupa. Jika fitur-fitur memiliki skala yang berbeda, algoritma tersebut mungkin tidak dapat memberikan hasil yang optimal. Dengan melakukan _Feature Scaling_ dapat menghilangkan perbedaan skala tersebut sehingga algoritma dapat bekerja dengan lebih baik.
+
+2. Mencegah dominasi fitur: Jika terdapat fitur-fitur dengan rentang nilai yang lebih besar daripada fitur lainnya, algoritma cenderung akan memberikan bobot yang lebih besar pada fitur tersebut. Hal ini dapat menyebabkan fitur-fitur lain yang memiliki rentang nilai yang lebih kecil menjadi kurang berpengaruh dalam pembentukan model. Dengan melakukan _Feature Scaling_ dapat mencegah fitur-fitur dengan rentang nilai yang lebih besar mendominasi fitur-fitur lainnya, sehingga setiap fitur memiliki kontribusi yang seimbang dalam model.
+
+3. Meningkatkan kecepatan konvergensi: Beberapa algoritma, seperti regresi menggunakan metode optimasi yang membutuhkan konvergensi yang cepat. Dengan melakukan _Feature Scaling_, skala data yang serupa dapat membantu algoritma mencapai konvergensi lebih cepat. Hal ini dapat menghemat waktu dan sumber daya komputasi yang diperlukan dalam proses pemodelan.
+
+Dengan melakukan _Feature Scaling_, data numerik memiliki skala yang serupa dan memenuhi asumsi algoritma _machine learning_.
+
+**5. Memisahkan kolom fitur dan target.**
+
+Kolom fitur terdiri dari semua kolom _dataset_ yang telah melewati tahapan sebelumnya kecuali kolom '_Sale Price_', sedangkan kolom target adalah kolom '_Sale Price_'. Tujuan dari pemisahan ini adalah untuk mempersiapkan data yang akan digunakan dalam proses pembelajaran dan prediksi pada model _machine learning_. Berdasarkan tujuan dari pelaksanaan proyek ini, maka kolom target yakni 'Sale Price' sebagai variabel yang ingin diprediksi.
+
+**6. Setelah melewati tahapan sebelumnya, kemudian _dataset_ dibagi menjadi 80% data latih dan 20% data uji.**
+
+Data latih akan digunakan untuk melatih model, sedangkan data uji digunakan untuk menguji seberapa baik model yang telah dilatih dapat melakukan prediksi pada data baru.
 
 ## MODELLING
 
@@ -315,5 +452,9 @@ Dalam beberapa kasus, komisi yang diperoleh dan tingkat komisi yang diterapkan d
 [[8]](https://id.wikipedia.org/wiki/Templat:Vertical_bar_chart) W. Ensiklopedia, “Templat:Vertical Bar Chart,” Wikipedia, https://id.wikipedia.org/wiki/Templat:Vertical_bar_chart (accessed Jul. 6, 2023).
 
 [[9]](https://amikjtc.com/jurnal/index.php/jurnal/article/view/91/85) K. Nugroho, “MODEL ANALISIS PREDIKSI MENGGUNAKAN METODE FUZZY TIME SERIES,” INFOKAM: Informasi Komputer Akuntansi dan Manajemen, vol. 12, no. 1, pp. 46–50, 2016.
+
+[[10]](https://www.mdpi.com/1099-4300/23/10/1258) T. Al-Shehari and R. A. Alsowail, “An Insider Data Leakage Detection Using One-Hot Encoding, Synthetic Minority Oversampling and Machine Learning Techniques,” Entropy, vol. 23, no. 10, p. 1258, Sep. 2021, doi: 10.3390/e23101258.
+
+[[11]](https://ieeexplore.ieee.org/abstract/document/9898687) D. U. Ozsahin, M. Taiwo Mustapha, A. S. Mubarak, Z. Said Ameen and B. Uzun, "Impact of feature scaling on machine learning models for the diagnosis of diabetes," 2022 International Conference on Artificial Intelligence in Everything (AIE), Lefkosa, Cyprus, 2022, pp. 87-94, doi: 10.1109/AIE57029.2022.00024.
 
 ---Ini adalah bagian akhir laporan---
