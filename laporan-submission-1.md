@@ -247,30 +247,28 @@ Tabel 9. Frekuensi pembelian pada _customer_.
 
 Tabel 9 menunjukkan frekuensi masing-masing nama pelanggan dalam _dataset_. Nama pelanggan "Michael Smith" memiliki frekuensi tertinggi, yaitu sebanyak 1163 data. Diikuti oleh "Michael Johnson" dengan frekuensi 889, "David Smith" dengan frekuensi 795, "James Smith" dengan frekuensi 788, dan "Jennifer Smith" dengan frekuensi 786.
 
-Berdasarkan Tabel 8 dan Tabel 9, dapat diketahui bahwa ternyata memiliki kesamaan untuk jumlah frekuensi tertinggi. Oleh karena itu, perlu diketahui nama yang terdapat pada kolom '_Salesperson_' dan '_Customer Name_' dengan cara sebagai berikut:
+Berdasarkan Tabel 8 dan Tabel 9, dapat diketahui bahwa ternyata memiliki kesamaan untuk jumlah frekuensi tertinggi. Oleh karena itu, perlu diketahui nama yang terdapat pada kolom '_Salesperson_' dan '_Customer Name_'.
 
-```
-salesperson_names = set(dataset['Salesperson'].unique())
-customer_names = set(dataset['Customer Name'].unique())
-combined_names = salesperson_names.union(customer_names)
-total_names = len(combined_names)
-print("Nama-nama yang ada pada kedua kolom Salesperson dan Customer Name:")
-for name in combined_names:
-    print(name)
-print("Jumlah nama yang muncul pada kedua kolom:", total_names)
-```
+Tabel 10. 10 Contoh Hasil pencarian data '_Salesperson_' dan '_Customer Name_' menggunakan _union function_.
 
-Kode diatas berfungsi untuk menampilkan daftar nama yang terdapat pada kolom '_Salesperson_' dan '_Customer Name_' dengan menggunanakan `.union()`. Hasilnya dapat dilihat pada Gambar 6 berikut.
+| Nama                |
+| ------------------- |
+| Wesley Stanton      |
+| Christina Khan      |
+| Mrs. Janice Edwards |
+| Kylie Dunlap        |
+| Dalton Yu           |
+| Chad Frey           |
+| Deborah Mcguire     |
+| Martha Cox DDS      |
+| Judy Anderson DDS   |
+| Lynn Mcclure        |
 
-Gambar 6. Hasil pencarian data '_Salesperson_' dan '_Customer Name_' menggunakan _union function_.
-
-[![union-sales-and-customer.png](https://i.postimg.cc/9MwrYwg0/union-sales-and-customer.png)](https://postimg.cc/JDmr10LC)
-
-Pada Gambar 6, dapat diketahui bahwa terdapat 698362 nama yang merupakan bagian dari _Sales_ dan _Customer_.
+Pada Tabel 10 merupakan contoh data yang terdapat pada kolom '_Salesperson_' dan '_Customer Name_'. Totalnya terdapat 698362 nama yang merupakan bagian dari _Sales_ dan _Customer_.
 
 **1i. Analisis pada kolom '_Car Make_' dan '_Car Model_' serta mencari merk dan model mobil yang paling mahal dan murah.**
 
-Tabel 10. Frekuensi data pada kolom '_Car Make_'.
+Tabel 11. Frekuensi data pada kolom '_Car Make_'.
 
 | Car Make  | Frequency |
 | --------- | --------- |
@@ -280,9 +278,9 @@ Tabel 10. Frekuensi data pada kolom '_Car Make_'.
 | Ford      | 499072    |
 | Nissan    | 498238    |
 
-Tabel 10 menunjukkan frekuensi masing-masing merek mobil. Merek "Honda" memiliki frekuensi tertinggi, yaitu sebanyak 500.048 data. Diikuti oleh merek "Chevrolet" dengan frekuensi 499.719, "Toyota" dengan frekuensi 499.491, "Ford" dengan frekuensi 499.072, dan "Nissan" dengan frekuensi 498.238. Dari data tersebut, dapat diketahui bahwa merek "Honda" merupakan merek mobil yang paling banyak diminati.
+Tabel 11 menunjukkan frekuensi masing-masing merek mobil. Merek "Honda" memiliki frekuensi tertinggi, yaitu sebanyak 500.048 data. Diikuti oleh merek "Chevrolet" dengan frekuensi 499.719, "Toyota" dengan frekuensi 499.491, "Ford" dengan frekuensi 499.072, dan "Nissan" dengan frekuensi 498.238. Dari data tersebut, dapat diketahui bahwa merek "Honda" merupakan merek mobil yang paling banyak diminati.
 
-Tabel 11. Frekuensi data pada kolom '_Car Model_'.
+Tabel 12. Frekuensi data pada kolom '_Car Model_'.
 
 | Car Model | Frequency |
 | --------- | --------- |
@@ -292,22 +290,22 @@ Tabel 11. Frekuensi data pada kolom '_Car Model_'.
 | F-150     | 498984    |
 | Altima    | 498154    |
 
-Tabel 11 menunjukkan frekuensi masing-masing model mobil. Model "Silverado" memiliki frekuensi tertinggi, yaitu sebanyak 500.114 data. Diikuti oleh model "Civic" dengan frekuensi 499.833, "Corolla" dengan frekuensi 499.483, "F-150" dengan frekuensi 498.984, dan "Altima" dengan frekuensi 498.154. Dari data tersebut, dapat diketahui bahwa model "Silverado" merupakan model mobil yang paling banyak diminati.
-
-Gambar 7. Grafik penjualan mobil berdasarkan tahun pembuatan mobil.
+Tabel 12 menunjukkan frekuensi masing-masing model mobil. Model "Silverado" memiliki frekuensi tertinggi, yaitu sebanyak 500.114 data. Diikuti oleh model "Civic" dengan frekuensi 499.833, "Corolla" dengan frekuensi 499.483, "F-150" dengan frekuensi 498.984, dan "Altima" dengan frekuensi 498.154. Dari data tersebut, dapat diketahui bahwa model "Silverado" merupakan model mobil yang paling banyak diminati.
 
 [![car-distribution.png](https://i.postimg.cc/QxgCx3WB/car-distribution.png)](https://postimg.cc/crH0XPhZ)
 
-Berdasarkan Gambar 7, dapat diketahui bahwa mobil dengan pembuatan tahun 2013 merupakan yang paling laku dan tahun 2022 merupakan tahun mobil yang paling sedikit dibandingkan yang lainnya.
+Gambar 6. Grafik penjualan mobil berdasarkan tahun pembuatan mobil.
 
-Tabel 12. Data mobil paling mahal dan murah.
+Berdasarkan Gambar 6, dapat diketahui bahwa mobil dengan pembuatan tahun 2013 merupakan yang paling laku dan tahun 2022 merupakan tahun mobil yang paling sedikit dibandingkan yang lainnya.
+
+Tabel 13. Data mobil paling mahal dan murah.
 
 | Merk Mobil | Model Mobil | Tahun Mobil | Harga  |
 | ---------- | ----------- | ----------- | ------ |
 | Nissan     | F-150       | 2013        | 50,000 |
 | Nissan     | Altima      | 2012        | 10,000 |
 
-Tabel 12 menunjukkan informasi tentang mobil dengan harga paling mahal dan paling murah dalam _dataset_. Mobil dengan harga paling mahal adalah Nissan F-150 tahun 2013 dengan harga 50,000, sedangkan mobil dengan harga paling murah adalah Nissan Altima tahun 2012 dengan harga 10,000.
+Tabel 13 menunjukkan informasi tentang mobil dengan harga paling mahal dan paling murah dalam _dataset_. Mobil dengan harga paling mahal adalah Nissan F-150 tahun 2013 dengan harga 50,000, sedangkan mobil dengan harga paling murah adalah Nissan Altima tahun 2012 dengan harga 10,000.
 
 **2. Melakukan drop pada kolom yang tidak relevan untuk diproses ke model seperti kolom '_Date_', '_Salesperson_', '_Customer Name_' dan '_Year_'.**
 
@@ -323,14 +321,9 @@ Dengan menghapus kolom-kolom tersebut, fokus pembentukan model untuk prediksi da
 
 **3. Melakukan Teknik _Encoding_ pada variabel kategorikal yaitu kolom '_Car Make_' dan '_Car Model_'.**
 
-```
-encoded_dataset = pd.get_dummies(dataset, columns=['Car Make', 'Car Model'])
-print(encoded_dataset)
-```
+Teknik _encoding_ yang digunakan disebut sebagai "_One-Hot Encoding_" dengan menggunakan fungsi `get_dummies()` dari _library_ pandas. Teknik ini digunakan untuk mengubah variabel kategorikal menjadi representasi numerik dalam bentuk kolom biner (0 dan 1) [[10]](https://www.mdpi.com/1099-4300/23/10/1258).Kolom '_Car Make_' dan '_Car Model_' dijadikan sebagai variabel kategorikal yang akan di-_encode_ sehingga hasilnya dapat dilihat pada Tabel 14.
 
-Teknik _encoding_ yang digunakan disebut sebagai "_One-Hot Encoding_" dengan menggunakan fungsi `get_dummies()` dari _library_ pandas. Teknik ini digunakan untuk mengubah variabel kategorikal menjadi representasi numerik dalam bentuk kolom biner (0 dan 1) [[10]](https://www.mdpi.com/1099-4300/23/10/1258).Kolom '_Car Make_' dan '_Car Model_' dijadikan sebagai variabel kategorikal yang akan di-_encode_ sehingga hasilnya dapat dilihat pada Tabel 13.
-
-Tabel 13. Contoh hasil penerapan metode _One-Hot Encoding_ pada data.
+Tabel 14. Contoh hasil penerapan metode _One-Hot Encoding_ pada data.
 
 | Car Year | Sale Price | Commission Rate | Commission Earned | Car Make_Chevrolet | Car Make_Ford | Car Make_Honda | Car Make_Nissan | Car Make_Toyota | Car Model_Altima | Car Model_Civic | Car Model_Corolla | Car Model_F-150 | Car Model_Silverado |
 | -------- | ---------- | --------------- | ----------------- | ------------------ | ------------- | -------------- | --------------- | --------------- | ---------------- | --------------- | ----------------- | --------------- | ------------------- |
@@ -340,7 +333,7 @@ Tabel 13. Contoh hasil penerapan metode _One-Hot Encoding_ pada data.
 | 2013     | 41937      | 0.092191        | 3866.20           | 0                  | 1             | 0              | 0               | 0               | 1                | 0               | 0                 | 0               | 0                   |
 | 2022     | 20256      | 0.113490        | 2298.85           | 0                  | 0             | 1              | 0               | 0               | 0                | 0               | 0                 | 0               | 1                   |
 
-Tabel 13 merupakan representasi data setelah dilakukan _encoding_ menggunakan metode _One-Hot Encoding_. Kolom-kolom dengan nama '_Car Make_' dan '_Car Model_' dipecah menjadi kolom-kolom baru sesuai dengan nilai unik yang ada. Nilai 1 pada kolom-kolom tersebut menunjukkan keberadaan nilai tersebut dalam data, sedangkan nilai 0 menunjukkan ketiadaan nilai tersebut. Hal ini memudahkan dalam representasi data kategorikal menjadi data numerik yang dapat digunakan dalam pemodelan _machine learning_.
+Tabel 14 merupakan representasi data setelah dilakukan _encoding_ menggunakan metode _One-Hot Encoding_. Kolom-kolom dengan nama '_Car Make_' dan '_Car Model_' dipecah menjadi kolom-kolom baru sesuai dengan nilai unik yang ada. Nilai 1 pada kolom-kolom tersebut menunjukkan keberadaan nilai tersebut dalam data, sedangkan nilai 0 menunjukkan ketiadaan nilai tersebut. Hal ini memudahkan dalam representasi data kategorikal menjadi data numerik yang dapat digunakan dalam pemodelan _machine learning_.
 
 **4. Melakukan _Feature Scaling_ pada data numerik yaitu kolom '_Car Year_', '_Commission Rate_', dan '_Commission Earned_' menggunakan `MinMaxScaler()`.**
 
@@ -372,10 +365,10 @@ Dalam proyek ini, penulis menggunakan tiga algoritma yaitu Regresi Linier, _Deci
    Regresi Linier adalah algoritma sederhana yang digunakan untuk memodelkan hubungan linier antara variabel independen dan variabel dependen. Algoritma ini cocok untuk memprediksi nilai kontinu seperti harga mobil. Kelebihan Regresi Linier adalah kemampuannya yang mudah diinterpretasikan dan memberikan pemahaman yang jelas tentang bagaimana setiap fitur berkontribusi terhadap prediksi harga mobil. Namun, Regresi Linier tidak dapat menangkap hubungan non-linier antara variabel dan rentan terhadap asumsi yang tidak terpenuhi. Dalam penggunaan _default_-nya, Regresi Linier tidak memerlukan parameter tambahan [[12]](https://jastt.org/index.php/jasttpath/article/view/57).
 
 2. _Decision Tree_:
-   _Decision Tree_ adalah algoritma yang memodelkan keputusan berdasarkan serangkaian pemilihan fitur yang paling informatif pada setiap langkahnya. Algoritma ini dapat menangani data dengan jenis variabel campuran dan tidak memerlukan _preprocessing_ data yang rumit. Kelebihan _Decision Tree_ adalah kemudahannya dalam dipahami dan diinterpretasikan. Namun, algoritma ini cenderung _overfitting_ jika tidak diatur dengan baik dan tidak stabil terhadap perubahan kecil pada data pelatihan. Dalam penggunaan _default_-nya, parameter yang digunakan adalah kriteria pemilihan fitur menggunakan _Entropy_ [[13]](https://ieeexplore.ieee.org/abstract/document/5991826).
+   _Decision Tree_ adalah algoritma yang memodelkan keputusan berdasarkan serangkaian pemilihan fitur yang paling informatif pada setiap langkahnya. Algoritma ini dapat menangani data dengan jenis variabel campuran dan tidak memerlukan _preprocessing_ data yang rumit. Kelebihan _Decision Tree_ adalah kemudahannya dalam dipahami dan diinterpretasikan. Namun, algoritma ini cenderung _overfitting_ jika tidak diatur dengan baik dan tidak stabil terhadap perubahan kecil pada data pelatihan. Dalam penggunaan _default_-nya, parameter yang digunakan adalah kriteria pemilihan fitur menggunakan _Entropy_ dengan nilai _default_ dari parameter tersebut adalah 0. _Entropy_ adalah metrik yang mengukur tingkat ketidakberaturan dalam data. Dalam algoritma _Decision Tree_, _Entropy_ digunakan untuk memilih fitur yang paling informatif dalam memisahkan data. Semakin tinggi nilai _Entropy_, semakin acak dan tidak teratur data tersebut. Dengan menggunakan _Entropy_, _Decision Tree_ mencari fitur yang dapat memisahkan data dengan lebih baik berdasarkan tingkat ketidakberaturan [[13]](https://ieeexplore.ieee.org/abstract/document/5991826).
 
 3. KNN (_K-Nearest Neighbors_):
-   KNN adalah algoritma yang menggunakan tetangga terdekat dari suatu data untuk melakukan prediksi. Algoritma ini tidak mengasumsikan distribusi data tertentu dan mampu menangani data dengan variasi tinggi. Kelebihan KNN adalah sederhana dalam implementasinya dan tidak memerlukan asumsi yang kuat tentang data. Namun, KNN memerlukan komputasi yang lebih tinggi karena melibatkan perhitungan jarak antara data, sensitif terhadap skala data, dan memerlukan pemilihan parameter K yang tepat. Dalam penggunaan _default_-nya, parameter yang digunakan adalah nilai K=5 dan metrik jarak menggunakan _Euclidean Distance_ [[14]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4916348/).
+   KNN adalah algoritma yang menggunakan tetangga terdekat dari suatu data untuk melakukan prediksi. Algoritma ini tidak mengasumsikan distribusi data tertentu dan mampu menangani data dengan variasi tinggi. Kelebihan KNN adalah sederhana dalam implementasinya dan tidak memerlukan asumsi yang kuat tentang data. Namun, KNN memerlukan komputasi yang lebih tinggi karena melibatkan perhitungan jarak antara data, sensitif terhadap skala data, dan memerlukan pemilihan parameter K yang tepat. Dalam penggunaan _default_-nya, parameter yang digunakan adalah nilai `K=5` dan metrik jarak menggunakan _Euclidean Distance_. _Euclidean Distance_ digunakan untuk mengukur seberapa dekat atau seberapa jauh suatu titik dengan tetangganya dalam ruang fitur [[14]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4916348/).
 
 Dengan menggunakan nilai parameter _default_ pada ketiga algoritma, maka kita dapat membandingkan performa dan karakteristik masing-masing algoritma secara objektif.
 
@@ -383,9 +376,9 @@ Dengan menggunakan nilai parameter _default_ pada ketiga algoritma, maka kita da
 
 Dalam proyek ini, matriks evaluasi yang digunakan adalah _Mean Squared Error_ (MSE) dan _Mean Absolute Error_ (MAE). MSE digunakan sebagai ukuran kesalahan antara nilai prediksi dan nilai sebenarnya dalam kasus regresi. Semakin kecil nilai MSE, semakin baik model dalam melakukan prediksi yang akurat. MAE juga digunakan sebagai ukuran kesalahan, tetapi memberikan perhitungan kesalahan yang lebih "absolut" daripada MSE.
 
-Dalam evaluasi model, tiga algoritma yaitu Regresi Linier, _Decision Tree_, dan KNN telah dievaluasi menggunakan kedua metrik tersebut. Dengan membandingkan nilai MSE dan MAE dari masing-masing algoritma maka dapat ditentukan algoritma mana yang memberikan prediksi yang lebih akurat dan sesuai dengan tujuan proyek. Hasil dari penggunaan MSE dan MAE dapat dilihat pada Tabel 14:
+Dalam evaluasi model, tiga algoritma yaitu Regresi Linier, _Decision Tree_, dan KNN telah dievaluasi menggunakan kedua metrik tersebut. Dengan membandingkan nilai MSE dan MAE dari masing-masing algoritma maka dapat ditentukan algoritma mana yang memberikan prediksi yang lebih akurat dan sesuai dengan tujuan proyek. Hasil dari penggunaan MSE dan MAE dapat dilihat pada Tabel 15:
 
-Tabel 14. Hasil evaluasi MSE dan MAE.
+Tabel 15. Hasil evaluasi MSE dan MAE.
 
 |     Model      |      MSE       |    MAE    |
 | :------------: | :------------: | :-------: |
@@ -393,17 +386,15 @@ Tabel 14. Hasil evaluasi MSE dan MAE.
 | Decision Tree  |  532215260.84  | 19978.21  |
 |      KNN       |  458917127.95  | 18142.63  |
 
-Dari hasil evaluasi pada Tabel 14, dapat dilihat bahwa model Regresi Linier memiliki MSE yang sangat tinggi, menunjukkan tingkat kesalahan yang besar dalam memprediksi harga mobil. Model _Decision Tree_ dan KNN memiliki MSE yang lebih rendah, menunjukkan performa yang lebih baik dalam memprediksi harga mobil.
+Dari hasil evaluasi pada Tabel 15, dapat dilihat bahwa model Regresi Linier memiliki MSE yang sangat tinggi, menunjukkan tingkat kesalahan yang besar dalam memprediksi harga mobil. Model _Decision Tree_ dan KNN memiliki MSE yang lebih rendah, menunjukkan performa yang lebih baik dalam memprediksi harga mobil.
 
 Dalam hal MAE, model _Decision Tree_ dan KNN memiliki tingkat kesalahan yang lebih rendah dibandingkan dengan model Regresi Linier, menunjukkan keakuratan yang lebih baik dalam memprediksi harga mobil. Oleh karena itu, untuk dataset ini, model _Decision Tree_ dan KNN lebih disarankan untuk digunakan dalam melakukan prediksi harga mobil.
 
-Gambar 8. Hasil prediksi harga asli menggunakan ketiga algoritma yang digunakan.
+Dari hasil pengujian prediksi harga mobil yang dilakukan, dapat dilihat bahwa setiap model memiliki prediksi harga penjualan mobil yang berbeda. Prediksi Regresi Linier menghasilkan harga penjualan mobil sebesar 13125, prediksi Decision Tree menghasilkan harga 10008, dan prediksi KNN menghasilkan harga 10142.2.
 
-[![sale-predict.png](https://i.postimg.cc/J4TdNm7n/sale-predict.png)](https://postimg.cc/6yv0KkvJ)
+Berdasarkan hasil pengujian prediksi harga mobil tersebut, dapat diketahui hasil prediksi pada algoritma _Decision Tree_ yang paling mendekati kemudian disusul oleh KNN dan Regresi Linier. Meski begitu, hasil prediksi masih jauh dari nilai asli. Berikut fitur yang paling berpengaruh dalam menentukan harga mobil dapat dilihat pada Tabel 16.
 
-Berdasarkan hasil pengujian prediksi harga mobil pada Gambar 8 diatas, data diketahui hasil prediksi pada algoritma _Decision Tree_ yang paling mendekati kemudian disusul oleh KNN dan Regresi Linier. Meski begitu, hasil prediksi masih jauh dari nilai asli. Berikut fitur yang paling berpengaruh dalam menentukan harga mobil dapat dilihat pada Tabel 15.
-
-Tabel 15. Fitur yang paling berpengaruh dalam menentukan harga mobil.
+Tabel 16. Fitur yang paling berpengaruh dalam menentukan harga mobil.
 
 | Fitur               | Importance Score      |
 | ------------------- | --------------------- |
