@@ -70,13 +70,15 @@ Contoh visualisasi data yang digunakan adalah diantaranya sebagai berikut:
 
 Gambar 1. Contoh bentuk _boxplot_ [[6]](https://eksplorasidatasaham.wordpress.com/2017/02/08/melihat-pola-sebaran-data-saham-analisa-boxplot/).
 
-- Line Chart,merupakan bentuk visualisasi statistik yang bertujuan untuk menampilkan data yang berkelanjutan sepanjang waktu atau rentang nilai tertentu.
+_Outlier_ adalah nilai yang secara signifikan berbeda dari nilai-nilai lain dalam suatu _dataset_. _Outlier_ bisa merupakan nilai yang sangat tinggi (_outlier_ atas) atau sangat rendah (_outlier_ bawah) dibandingkan dengan sebagian besar nilai lainnya.
 
-[![line-plot.png](https://i.postimg.cc/L4139Sd1/line-plot.png)](https://postimg.cc/rzqrjvwV)
+- _Line Chart_,merupakan bentuk visualisasi statistik yang bertujuan untuk menampilkan data yang berkelanjutan dengan periode atau rentang nilai tertentu. Garis yang dihasilkan dapat menunjukkan tren kenaikan atau penurunan pada data. Misalnya pada Gambar 2, terdapat empat data penjualan tahunan per kuartal selama 3 bulan yang terlihat mengalami kenaikan setiap bulannya.
 
-Gambar 2. Contoh bentuk _line chart_ [[7]](https://ilmudatapy.com/membuat-line-plot-dengan-matplotlib-python/).
+[![line-chart.png](https://i.postimg.cc/1zFycnDW/line-chart.png)](https://postimg.cc/cKsqdJ9Y)
 
-- Bar Chart, merupakan bentuk visualisasi statistik yang bertujuan untuk menampilkan perbandingan antara beberapa variabel.
+Gambar 2. Contoh bentuk _line chart_ [[7]](https://bitlabs.id/blog/diagram-garis-adalah/).
+
+- _Bar Chart_, merupakan bentuk visualisasi statistik yang bertujuan untuk menampilkan perbandingan antara beberapa variabel. Misalnya pada Gambar 3, menunjukkan perbandingan antara banyaknya populasi (sumbu Y) selama tahun 1900 sampai 2009 (sumbu X).
 
 [![barchart.png](https://i.postimg.cc/yx8M4Nd2/barchart.png)](https://postimg.cc/ZBX7646L)
 
@@ -447,7 +449,7 @@ Kemudian, berdasarkan hasil evaluasi model _machine learning_ yang dilakukan, da
 
 [[6]](https://eksplorasidatasaham.wordpress.com/2017/02/08/melihat-pola-sebaran-data-saham-analisa-boxplot/) Ts. Priyadi, “Melihat Pola Sebaran data saham (Analisa Boxplot),” Perjalanan Menuju Happy Investing, https://eksplorasidatasaham.wordpress.com/2017/02/08/melihat-pola-sebaran-data-saham-analisa-boxplot/ (accessed Jul. 6, 2023).
 
-[[7]](https://ilmudatapy.com/membuat-line-plot-dengan-matplotlib-python/) L. Afifah, “Membuat line plot Dengan Matplotlib Python,” IlmudataPy, https://ilmudatapy.com/membuat-line-plot-dengan-matplotlib-python/ (accessed Jul. 6, 2023).
+[[7]](https://bitlabs.id/blog/diagram-garis-adalah/) Minlab, “Diagram Garis: Pengertian, Cara Membuat, & Serba-Serbinya” Bitlabs, https://bitlabs.id/blog/diagram-garis-adalah/ (accessed Jul. 10, 2023).
 
 [[8]](https://id.wikipedia.org/wiki/Templat:Vertical_bar_chart) W. Ensiklopedia, “Templat:Vertical Bar Chart,” Wikipedia, https://id.wikipedia.org/wiki/Templat:Vertical_bar_chart (accessed Jul. 6, 2023).
 
