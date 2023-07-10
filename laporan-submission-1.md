@@ -30,15 +30,15 @@ Oleh karena itu, penggunaan teknik _machine learning_ dalam menentukan harga mob
 
 Pada proyek ini, penulis menawarkan untuk menggunakan 3 algoritma dalam melakukan prediksi harga mobil dan menentukan algoritma yang paling baik prediksinya diantara lainnya. Adapun algoritma yang dipilih yaitu:
 
-- Regresi Linear
+- Regresi Linier
 - _Decision Tree_
 - KNN (_K-Nearest Neighbors_)
 
-Berikut adalah penjelasan yang lebih mendalam mengenai pemilihan ketiga algoritma (Regresi Linear, _Decision Tree_, KNN) sebagai solusi untuk memprediksi harga mobil dan bagaimana masing-masing algoritma dapat membantu menjawab pertanyaan masalah:
+Berikut adalah penjelasan yang lebih mendalam mengenai pemilihan ketiga algoritma (Regresi Linier, _Decision Tree_, KNN) sebagai solusi untuk memprediksi harga mobil dan bagaimana masing-masing algoritma dapat membantu menjawab pertanyaan masalah:
 
-- Regresi Linear: Algoritma ini dipilih karena sederhana dan memiliki interpretabilitas tinggi. Regresi linear dapat memberikan pemahaman yang jelas tentang kontribusi setiap fitur (tipe, model, tahun mobil) terhadap prediksi harga mobil. Dengan demikian, kita dapat mengidentifikasi variabel yang paling signifikan dalam menentukan harga.
+- Regresi Linier: Algoritma ini dipilih karena sederhana dan memiliki interpretabilitas tinggi. Regresi Linier dapat memberikan pemahaman yang jelas tentang kontribusi setiap fitur (tipe, model, tahun mobil) terhadap prediksi harga mobil. Dengan demikian, kita dapat mengidentifikasi variabel yang paling signifikan dalam menentukan harga.
 
-- _Decision Tree_: Algoritma ini dipilih karena kemampuannya untuk memodelkan hubungan yang kompleks antara fitur-fitur dan variabel target. _Decision tree_ membagi _dataset_ berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya. Hal ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi linear. _Decision tree_ dapat membantu menggali hubungan non-linear antara fitur-fitur dan harga mobil.
+- _Decision Tree_: Algoritma ini dipilih karena kemampuannya untuk memodelkan hubungan yang kompleks antara fitur-fitur dan variabel target. _Decision tree_ membagi _dataset_ berdasarkan pemilihan fitur yang paling informatif pada setiap langkahnya. Hal ini memungkinkan pemodelan yang lebih kompleks dibandingkan dengan regresi Linier. _Decision tree_ dapat membantu menggali hubungan non-Linier antara fitur-fitur dan harga mobil.
 
 - KNN (_K-Nearest Neighbors_): Algoritma ini dipilih karena sifatnya yang sederhana, intuitif, dan mampu menangani hubungan lokal antara fitur-fitur dan target. KNN mencari tetangga terdekat dari suatu data dan memprediksi berdasarkan mayoritas label atau rata-rata nilai tetangga terdekatnya. KNN dapat membantu dalam mengidentifikasi pola lokal yang mungkin terdapat dalam data, sehingga dapat memberikan prediksi yang lebih akurat dalam kasus harga mobil.
 
@@ -346,7 +346,7 @@ Metode _MinMaxScaler_ bekerja dengan mengubah setiap nilai dalam kolom menjadi n
 
 Dengan melakukan Feature Scaling pada data numerik dapat membantu meningkatkan performa model dalam beberapa cara seperti berikut [[11]](https://ieeexplore.ieee.org/abstract/document/9898687) :
 
-1. Menghilangkan perbedaan skala: Beberapa algoritma _machine learning_, seperti regresi linear dan KNN, mengasumsikan bahwa semua fitur memiliki skala yang serupa. Jika fitur-fitur memiliki skala yang berbeda, algoritma tersebut mungkin tidak dapat memberikan hasil yang optimal. Dengan melakukan _Feature Scaling_ dapat menghilangkan perbedaan skala tersebut sehingga algoritma dapat bekerja dengan lebih baik.
+1. Menghilangkan perbedaan skala: Beberapa algoritma _machine learning_, seperti regresi Linier dan KNN, mengasumsikan bahwa semua fitur memiliki skala yang serupa. Jika fitur-fitur memiliki skala yang berbeda, algoritma tersebut mungkin tidak dapat memberikan hasil yang optimal. Dengan melakukan _Feature Scaling_ dapat menghilangkan perbedaan skala tersebut sehingga algoritma dapat bekerja dengan lebih baik.
 
 2. Mencegah dominasi fitur: Jika terdapat fitur-fitur dengan rentang nilai yang lebih besar daripada fitur lainnya, algoritma cenderung akan memberikan bobot yang lebih besar pada fitur tersebut. Hal ini dapat menyebabkan fitur-fitur lain yang memiliki rentang nilai yang lebih kecil menjadi kurang berpengaruh dalam pembentukan model. Dengan melakukan _Feature Scaling_ dapat mencegah fitur-fitur dengan rentang nilai yang lebih besar mendominasi fitur-fitur lainnya, sehingga setiap fitur memiliki kontribusi yang seimbang dalam model.
 
@@ -364,60 +364,30 @@ Data latih akan digunakan untuk melatih model, sedangkan data uji digunakan untu
 
 ## MODELLING
 
-Pada project ini, menggunakan 3 algoritma yaitu Regresi Linear, Decision Tree dan KNN (K-Nearest Neighbors). Kelebihan dan Kekurangan Algoritma tersebut adalah sebagai berikut:
+Dalam proyek ini, penulis menggunakan tiga algoritma yaitu Regresi Linier, _Decision Tree_, dan KNN (_K-Nearest Neighbors_) untuk memodelkan prediksi harga mobil. Algoritma-algoritma ini dipilih berdasarkan karakteristik dan kelebihan masing-masing seperti yang telah dijelaskan sebelumnya. Berikut ini adalah penjelasan lebih rinci tentang masing-masing algoritma beserta nilai parameter default yang digunakan:
 
-Berikut adalah kelebihan dan kekurangan dari tiga algoritma tersebut:
+1. Regresi Linier:
+   Regresi Linier adalah algoritma sederhana yang digunakan untuk memodelkan hubungan linier antara variabel independen dan variabel dependen. Algoritma ini cocok untuk memprediksi nilai kontinu seperti harga mobil. Kelebihan Regresi Linier adalah kemampuannya yang mudah diinterpretasikan dan memberikan pemahaman yang jelas tentang bagaimana setiap fitur berkontribusi terhadap prediksi harga mobil. Namun, Regresi Linier tidak dapat menangkap hubungan non-linier antara variabel dan rentan terhadap asumsi yang tidak terpenuhi. Dalam penggunaan _default_-nya, Regresi Linier tidak memerlukan parameter tambahan [[12]](https://jastt.org/index.php/jasttpath/article/view/57).
 
-1. Regresi Linear:
-   Kelebihan:
+2. _Decision Tree_:
+   _Decision Tree_ adalah algoritma yang memodelkan keputusan berdasarkan serangkaian pemilihan fitur yang paling informatif pada setiap langkahnya. Algoritma ini dapat menangani data dengan jenis variabel campuran dan tidak memerlukan _preprocessing_ data yang rumit. Kelebihan _Decision Tree_ adalah kemudahannya dalam dipahami dan diinterpretasikan. Namun, algoritma ini cenderung _overfitting_ jika tidak diatur dengan baik dan tidak stabil terhadap perubahan kecil pada data pelatihan. Dalam penggunaan _default_-nya, parameter yang digunakan adalah kriteria pemilihan fitur menggunakan _Entropy_ [[13]](https://ieeexplore.ieee.org/abstract/document/5991826).
 
-   - Sederhana dan mudah diinterpretasikan.
-   - Cocok untuk memodelkan hubungan linier antara variabel dependen dan independen.
-   - Cocok untuk memprediksi nilai kontinu.
+3. KNN (_K-Nearest Neighbors_):
+   KNN adalah algoritma yang menggunakan tetangga terdekat dari suatu data untuk melakukan prediksi. Algoritma ini tidak mengasumsikan distribusi data tertentu dan mampu menangani data dengan variasi tinggi. Kelebihan KNN adalah sederhana dalam implementasinya dan tidak memerlukan asumsi yang kuat tentang data. Namun, KNN memerlukan komputasi yang lebih tinggi karena melibatkan perhitungan jarak antara data, sensitif terhadap skala data, dan memerlukan pemilihan parameter K yang tepat. Dalam penggunaan _default_-nya, parameter yang digunakan adalah nilai K=5 dan metrik jarak menggunakan _Euclidean Distance_ [[14]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4916348/).
 
-   Kekurangan:
-
-   - Tidak bisa menangkap hubungan non-linier antara variabel.
-   - Rentan terhadap asumsi yang tidak terpenuhi, seperti asumsi keterikatan linieritas dan independensi error.
-
-2. Decision Tree:
-   Kelebihan:
-
-   - Mudah dipahami dan diinterpretasikan.
-   - Mampu menangani data dengan jenis variabel campuran (numerik dan kategorikal).
-   - Tidak memerlukan preprocessing data yang rumit.
-
-   Kekurangan:
-
-   - Cenderung overfitting terhadap data pelatihan jika tidak diatur dengan baik.
-   - Tidak stabil terhadap perubahan kecil pada data pelatihan.
-
-3. KNN (K-Nearest Neighbors):
-   Kelebihan:
-
-   - Sederhana dan mudah diimplementasikan.
-   - Tidak mengasumsikan distribusi data tertentu.
-   - Mampu menangani data dengan variasi tinggi dan tidak memerlukan asumsi yang kuat tentang data.
-
-   Kekurangan:
-
-   - Memerlukan komputasi yang lebih tinggi karena melibatkan perhitungan jarak antara data.
-   - Sensitif terhadap skala data dan pemilihan parameter K yang tepat.
-   - Tidak memberikan interpretasi yang jelas tentang hubungan antara variabel.
-
-Berdasarkan hasil modelling dari 3 algoritma yang digunakan diatas, algoritma Decision Tree membutuhkan lebih banyak waktu dibandingkan algoritma lainnya.
+Dengan menggunakan nilai parameter _default_ pada ketiga algoritma, maka kita dapat membandingkan performa dan karakteristik masing-masing algoritma secara objektif.
 
 ## EVALUATION
 
-Pada project ini, matriks evaluasi yang digunakan dalam proyek ini adalah Mean Squared Error (MSE). MSE digunakan sebagai ukuran kesalahan antara nilai prediksi dan nilai sebenarnya dalam kasus regresi. Semakin kecil nilai MSE, semakin baik model dalam melakukan prediksi yang akurat. Dalam kasus ini, tiga algoritma telah dievaluasi yaitu Regresi Linear, Decision Tree, dan KNN.
+Pada project ini, matriks evaluasi yang digunakan dalam proyek ini adalah Mean Squared Error (MSE). MSE digunakan sebagai ukuran kesalahan antara nilai prediksi dan nilai sebenarnya dalam kasus regresi. Semakin kecil nilai MSE, semakin baik model dalam melakukan prediksi yang akurat. Dalam kasus ini, tiga algoritma telah dievaluasi yaitu Regresi Linier, Decision Tree, dan KNN.
 
 [![mse-reports.png](https://i.postimg.cc/5Nw2y7fn/mse-reports.png)](https://postimg.cc/ZC5SDLBd)
 
-Berdasarkan hasil diatas, dapat diketahui bahwa Decision Tree maupun KNN memberikan hasil prediksi yang lebih baik dengan nilai MSE yang lebih rendah dibandingkan Regresi Linear. Oleh karena itu, untuk dataset ini, model Decision Tree dan KNN lebih disarankan untuk digunakan dalam melakukan prediksi Sale Price.
+Berdasarkan hasil diatas, dapat diketahui bahwa Decision Tree maupun KNN memberikan hasil prediksi yang lebih baik dengan nilai MSE yang lebih rendah dibandingkan Regresi Linier. Oleh karena itu, untuk dataset ini, model Decision Tree dan KNN lebih disarankan untuk digunakan dalam melakukan prediksi Sale Price.
 
 [![sale-predict.png](https://i.postimg.cc/J4TdNm7n/sale-predict.png)](https://postimg.cc/6yv0KkvJ)
 
-Berdasarkan hasil pengujian prediksi diatas, memang hasil pada algoritma Decision Tree yang paling mendekati kemudian disusul oleh KNN dan ada algoritma Regresi Linear. Meski begitu, hasil prediksi masih jauh dari nilai asli.
+Berdasarkan hasil pengujian prediksi diatas, memang hasil pada algoritma Decision Tree yang paling mendekati kemudian disusul oleh KNN dan ada algoritma Regresi Linier. Meski begitu, hasil prediksi masih jauh dari nilai asli.
 
 [![important-feature.png](https://i.postimg.cc/BZPxY0Cb/important-feature.png)](https://postimg.cc/kD96GLzP)
 
@@ -455,6 +425,12 @@ Dalam beberapa kasus, komisi yang diperoleh dan tingkat komisi yang diterapkan d
 
 [[10]](https://www.mdpi.com/1099-4300/23/10/1258) T. Al-Shehari and R. A. Alsowail, “An Insider Data Leakage Detection Using One-Hot Encoding, Synthetic Minority Oversampling and Machine Learning Techniques,” Entropy, vol. 23, no. 10, p. 1258, Sep. 2021, doi: 10.3390/e23101258.
 
-[[11]](https://ieeexplore.ieee.org/abstract/document/9898687) D. U. Ozsahin, M. Taiwo Mustapha, A. S. Mubarak, Z. Said Ameen and B. Uzun, "Impact of feature scaling on machine learning models for the diagnosis of diabetes," 2022 International Conference on Artificial Intelligence in Everything (AIE), Lefkosa, Cyprus, 2022, pp. 87-94, doi: 10.1109/AIE57029.2022.00024.
+[[11]](https://ieeexplore.ieee.org/abstract/document/9898687) D. U. Ozsahin, M. Taiwo Mustapha, A. S. Mubarak, Z. Said Ameen and B. Uzun, "Impact of feature scaling on machine learning models for the diagnosis of diabetes," 2022 International Conference on Artificial Intelligence in Everything (AIE), Lefkosa, Cyprus, pp. 87-94, 2022, doi: 10.1109/AIE57029.2022.00024.
+
+[[12]](https://jastt.org/index.php/jasttpath/article/view/57) D. Maulud and A. M. Abdulazeez, “A Review on Linear Regression Comprehensive in Machine Learning”, JASTT, vol. 1, no. 4, pp. 140-147, Dec. 2020.
+
+[[13]](https://ieeexplore.ieee.org/abstract/document/5991826) A. Navada, A. N. Ansari, S. Patil and B. A. Sonkamble, "Overview of use of decision tree algorithms in machine learning," 2011 IEEE Control and System Graduate Research Colloquium, Shah Alam, Malaysia, pp. 37-42, 2011, doi: 10.1109/ICSGRC.2011.5991826.
+
+[[14]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4916348/) Z. Zhang, “Introduction to machine learning: K-Nearest Neighbors,” Annals of Translational Medicine, vol. 4, no. 11, pp. 218–218, 2016. doi:10.21037/atm.2016.03.37
 
 ---Ini adalah bagian akhir laporan---
