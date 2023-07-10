@@ -18,8 +18,8 @@ Oleh karena itu, penggunaan teknik _machine learning_ dalam menentukan harga mob
 
 ### Problem Statements
 
-- Faktor apa yang paling berpengaruh dalam menentukan prediksi harga penjualan mobil?
-- Bagaimana pendekatan _machine learning_ dapat digunakan untuk memprediksi harga mobil berdasarkan faktor-faktor yang berpengaruh tersebut?
+- Fitur apa yang paling berpengaruh dalam menentukan harga penjualan mobil?
+- Bagaimana pendekatan _machine learning_ dapat digunakan untuk memprediksi harga mobil berdasarkan fitur-fitur yang berpengaruh tersebut?
 
 ### Goals
 
@@ -428,6 +428,10 @@ Selanjutnya, '_Commission Rate_' memiliki skor penting sebesar 0.291639339603808
 Fitur-fitur lainnya, seperti '_Car Year_', '_Car Model_' dan '_Car Make_' memiliki skor penting yang sangat kecil, bahkan mendekati nol. Hal ini menunjukkan bahwa fitur-fitur tersebut memiliki pengaruh yang relatif kecil atau kurang signifikan dalam memprediksi harga mobil.
 
 ## CONCLUSION
+
+Berdasarkan analisis, fitur yang paling berpengaruh terhadap harga penjualan mobil (_Sale Price_) adalah '_Commission Earned_' (0.7083596131830072) dan '_Commission Rate_' (0.2916393378207174). Hal ini menunjukkan bahwa komisi yang diperoleh dan tingkat komisi yang diterapkan memiliki pengaruh yang signifikan terhadap harga penjualan mobil. Fitur-fitur lainnya seperti '_Car Year_' dan '_Car Make_' memiliki pengaruh yang lebih kecil dalam menentukan harga penjualan mobil.
+
+Kemudian, berdasarkan hasil evaluasi model _machine learning_ yang dilakukan, dapat disimpulkan bahwa pendekatan _machine learning_ dengan menggunakan model _Decision Tree_ dan KNN dapat digunakan untuk memprediksi harga mobil berdasarkan fitur-fitur yang berpengaruh. Model _Decision Tree_ dan KNN menunjukkan performa yang lebih baik dengan MSE yang lebih rendah dan tingkat kesalahan (MAE) yang lebih kecil dibandingkan dengan model Regresi Linier. Oleh karena itu, pendekatan _machine learning_ ini dapat memberikan prediksi yang lebih akurat dalam menentukan harga mobil berdasarkan fitur-fitur yang paling berpengaruh seperti '_Commission Earned_' dan '_Commission Rate_'.
 
 ## REFERENSI
 
